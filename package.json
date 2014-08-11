@@ -1,14 +1,23 @@
 {
   "name": "read-list",
   "version": "0.0.1",
-  
+  "author": {
+    "name": "Kiki le singe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiki-le-singe/read-list.git"
+  },
+  "description": "My Boilerplate",
+  "engines": {
+    "node": ">= 0.10.23"
+  },
   "dependencies": {
     "express": "~4.8.3",
     "mongodb": "~1.4.8",
     "mongoose": "~3.8.14",
     "body-parser": "~1.5.2"
   },
-  
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-copy": "^0.5.0",
@@ -37,8 +46,5 @@
     "load-grunt-tasks": "0.6.0",
     "time-grunt": "~0.3.1",
     "jshint-stylish": "~0.1.5"
-  },
-  "engines": {
-    "node": ">=0.8.0"
   }
 }
