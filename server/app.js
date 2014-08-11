@@ -1,65 +1,64 @@
-'use strict';
+// server/app.js
 
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var async = require('async');
-var hbs = require('express-hbs');
-var baucis = require('baucis');
-var socketIO = require('socket.io');
-var mongoose = require('mongoose');
+////////////////
+// BASE SETUP //
+////////////////
+
+// Module dependencies.
+var application_root = __dirname,
+    express = require('express'), // Web framework
+    app = express(), // define server
+    path = require('path'), // Utilities for dealing with file paths
+    mongoose = require('mongoose'), //MongoDB integration
+    bodyParser = require('body-parser'),
+    port = process.env.PORT || 9000; // set our port
+
+// parses request body and populates request.body
+app.use(bodyParser());
+// where to serve static content
+app.use(express.static(path.join(application_root, '../app')));
+
+////////////////////////
+// ROUTES FOR OUR API //
+////////////////////////
+
+var router = express.Router(); // get an instance of the express Router
+
+// test route to make sure everything is working (accessed at GET http://localhost:9000/api)
+router.get('/', function(request, response) {
+  response.json({ message: 'hooray! welcome to our api!' });
+});
+
+// Get a list of articles
+router.route('/articles')
+  .get(function(request, response) {
+    response.json([
+      { 
+        title : 'Title 1',
+        date : 'now',
+        description : 'Description',
+        author : 'Mickey' 
+      },
+      {
+        title : 'Title 2',
+        date : 'Saturday',
+        description : 'Description 2',
+        author : 'Donald' 
+      }
+    ]); 
+  });
+
+// all of our routes will be prefixed with /api
+app.use('/api', router);
 
 
-// start mongoose
-mongoose.connect('mongodb://localhost/sit');
-var db = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function callback () {
+//////////////////////
+// START THE SERVER //
+//////////////////////
 
-	/* test schema */
-    var testSchema = new mongoose.Schema({
-        test: String
-    });
-
-    var Test = mongoose.model( 'test', testSchema );
-
-    /* set Baucis */
-    baucis.rest({
-        singular: 'test'
-    });
-
-	var app = express();
-
-	app.configure(function(){
-	    app.set('port', 9000);
-
-	    app.set('view engine', 'handlebars');
-	    app.set('views', __dirname + '../app/scripts/views');
-	});
-
-    app.use('/api/v1', baucis());
-
-	// simple log
-	app.use(function(req, res, next){
-	  console.log('%s %s', req.method, req.url);
-	  next();
-	});
-
-	// mount static
-	app.use(express.static( path.join( __dirname, '../app') ));
-	app.use(express.static( path.join( __dirname, '../.tmp') ));
-
-
-	// route index.html
-	app.get('/', function(req, res){
-	  res.sendfile( path.join( __dirname, '../app/index.html' ) );
-	});
-
-	// start server
-	http.createServer(app).listen(app.get('port'), function(){
-	    console.log('Express App started!');
-	});
+app.listen(port, function() {
+  console.log('Express server listening on port %d in %s node', port, app.settings.env);
 });
 
 
