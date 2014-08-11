@@ -13,7 +13,7 @@ var mountFolder = function (connect, dir) {
 
 module.exports = function (grunt) {
     // load all grunt tasks
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('load-grunt-tasks')(grunt);
     // show elapsed time at the end
     require('time-grunt')(grunt);
 
@@ -45,7 +45,6 @@ module.exports = function (grunt) {
                     
                     'test/spec/{,**/}*.js'
                 ],
-                tasks: ['exec'],
                 options: {
                     livereload: true
                 }
@@ -68,15 +67,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-        // mocha command
-        exec: {
-            mocha: {
-                command: 'mocha-phantomjs http://localhost:<%= connect.testserver.options.port %>/test',
-                stdout: true
-            }
-        },
-
         
         // express app
         express: {
@@ -283,7 +273,7 @@ module.exports = function (grunt) {
     });
 
     // starts express server with live testing via testserver
-    grunt.registerTask('default', function (target) {
+    grunt.registerTask('serve', function (target) {
 
         // what is this??
         if (target === 'dist') {
@@ -297,7 +287,6 @@ module.exports = function (grunt) {
             'compass:server',
             'connect:testserver',
             'express:dev',
-            'exec',
             'open',
             'watch'
         ]);
@@ -309,8 +298,7 @@ module.exports = function (grunt) {
         'createDefaultTemplate',
         'handlebars',
         'compass',
-        'connect:testserver',
-        'exec:mocha'
+        'connect:testserver'
     ]);
 
     grunt.registerTask('build', [
