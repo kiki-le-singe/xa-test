@@ -33,7 +33,6 @@
     "grunt-contrib-htmlmin": "^0.3.0",
     "grunt-bower-install": "~1.4.0",
     "grunt-contrib-imagemin": "~0.7.0",
-    "grunt-contrib-livereload": "0.1.2",
     "grunt-mocha": "~0.4.11",
     "grunt-bower-requirejs": "~1.0.0",
     "grunt-usemin": "~2.3.0",
