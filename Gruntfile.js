@@ -24,22 +24,18 @@ module.exports = function (grunt) {
 
         // watch list
         watch: {
-            
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
             },
-            
             livereload: {
                 files: [
-                    
                     '<%= yeoman.app %>/*.html',
                     '{.tmp,<%= yeoman.app %>}/styles/{,**/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,**/}*.js',
                     '{.tmp,<%= yeoman.app %>}/templates/{,**/}*.hbs',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                    
-                    'test/spec/{,**/}*.js'
+                    // 'test/spec/{,**/}*.js' TODO livereload the next new tests
                 ],
                 options: {
                     livereload: true
@@ -63,7 +59,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         // express app
         express: {
             options: {
@@ -86,7 +82,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
 
         // open app and test page
         open: {
@@ -110,11 +105,10 @@ module.exports = function (grunt) {
                 'Gruntfile.js',
                 '<%= yeoman.app %>/scripts/{,*/}*.js',
                 '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
+                // 'test/spec/{,*/}*.js' // TODO lint the next news tests
             ]
         },
 
-        
         // compass
         compass: {
             options: {
@@ -123,17 +117,18 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: 'app/bower_components',
+                importPath: '<%= yeoman.app %>/bower_components',
                 relativeAssets: true
             },
             dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
+            dev: {                    // Another target
+              options: {
+                debugInfo: true,
+                sassDir: '<%= yeoman.app %>/styles',
+                cssDir: '<%= yeoman.app %>/styles'
+              }
             }
         },
-        
 
         // require
         requirejs: {
@@ -280,22 +275,13 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
-            'compass:server',
+            'compass:dev',
             'connect:testserver',
             'express:dev',
             'open',
             'watch'
         ]);
     });
-
-    // todo fix these
-    grunt.registerTask('test', [
-        'clean:server',
-        'createDefaultTemplate',
-        'handlebars',
-        'compass',
-        'connect:testserver'
-    ]);
 
     grunt.registerTask('build', [
         'createDefaultTemplate',
