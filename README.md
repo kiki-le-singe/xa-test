@@ -8,6 +8,8 @@
 
  * [nodejs](http://nodejs.org/)
  * [Mongodb](http://www.mongodb.org/)
+  * [Install on Ubuntu](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+  * [Install on OS X](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
  * [GruntJS](http://gruntjs.com/)
  * [bower](http://bower.io/)
  * [compass](http://compass-style.org/): **Only for build**
