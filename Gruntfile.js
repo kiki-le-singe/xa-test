@@ -239,8 +239,19 @@ module.exports = function (grunt) {
                     '.tmp/scripts/templates.js': ['templates/**/*.hbs']
                 }
             }
+        },
+
+        mocha: {
+            test: {
+                options: {
+                    reporter: 'Spec'
+                },
+                src: ['tests/index.html']
+            }
         }
     });
+
+    grunt.registerTask('test', ['mocha']);
 
     grunt.registerTask('createDefaultTemplate', function () {
         grunt.file.write('.tmp/scripts/templates.js', 'this.JST = this.JST || {};');
