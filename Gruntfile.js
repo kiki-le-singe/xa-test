@@ -178,17 +178,6 @@ module.exports = function (grunt) {
             }
         },
 
-        imagemin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
-            }
-        },
-
         cssmin: {
             dist: {
                 files: {
@@ -239,12 +228,6 @@ module.exports = function (grunt) {
             }
         },
 
-        bower: {
-            all: {
-                rjsConfig: '<%= yeoman.app %>/scripts/main.js'
-            }
-        },
-
         // handlebars
         handlebars: {
             compile: {
@@ -289,7 +272,6 @@ module.exports = function (grunt) {
         'compass:dist',
         'useminPrepare',
         'requirejs',
-        'imagemin',
         'htmlmin',
         'concat',
         'cssmin',
