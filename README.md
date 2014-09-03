@@ -63,4 +63,4 @@ The library used for tests are :
 ## Sources
 
  * [Yeoman](http://yeoman.io/)
- * [generator-marionette](https://github.com/mrichard/generator-marionette): **My Boilerplate** is based on it
+ * [generator-marionette](https://github.com/mrichard/generator-marionette): **Marionette Boilerplate** is based on it
