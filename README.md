@@ -34,7 +34,7 @@ Then serve the app on `localhost:9000` and opens your default browser
 
 * `$ grunt test`
 
-Runs tests located in `/test/spec`.
+Runs tests located in `/tests/js/spec`.
 
 ## Included JavaScript libraries
 
