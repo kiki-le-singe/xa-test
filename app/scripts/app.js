@@ -1,11 +1,12 @@
 define([
 	'marionette',
-	'views/helloWorldItemView',
+	'controllers/nav',
+	'routers/routers',
 	'vent',
 	'templates'
 ],
 
-function (Marionette, HelloWorldItemView, Vent, templates) {
+function (Marionette, NavController, Routers, Vent, templates) {
   'use strict';
 
 	var App = new Marionette.Application();
@@ -19,7 +20,9 @@ function (Marionette, HelloWorldItemView, Vent, templates) {
 
 	/* Add initializers here */
 	App.addInitializer(function () {
-		App.content.show(new HelloWorldItemView());
+		this.routers = new Routers({
+			controller: new NavController({contentRegion: App.content})
+		});
 		Vent.trigger("APP:START");
 	});
 
