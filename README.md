@@ -32,6 +32,10 @@
 
 Then serve the app on `localhost:9000` and opens your default browser
 
+* `$ grunt test`
+
+Runs tests located in `/test/spec`.
+
 ## Included JavaScript libraries
 
  * [Backbone.js](http://backbonejs.org/)
@@ -47,6 +51,14 @@ Then serve the app on `localhost:9000` and opens your default browser
 ## API
 
 By default the root access for the API is http://localhost:9000/api. Available example: http://localhost:9000/api/articles
+
+## Tests
+
+The library used for tests are :
+
+ * [mocha](http://visionmedia.github.io/mocha/)
+ * [sinon](http://sinonjs.org/)
+ * [chai](http://chaijs.com/)
 
 ## Sources
 
