@@ -1,4 +1,4 @@
-# My Boilerplate
+# Marionette Boilerplate
 
 ## Introduction
 
