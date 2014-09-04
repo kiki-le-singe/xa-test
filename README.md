@@ -60,6 +60,10 @@ The library used for tests are :
  * [sinon](http://sinonjs.org/)
  * [chai](http://chaijs.com/)
 
+## App configuration
+
+The configuration of the application is located in `/app/configs`
+
 ## Sources
 
  * [Yeoman](http://yeoman.io/)
