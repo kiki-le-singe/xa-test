@@ -1,10 +1,9 @@
 define([
   'marionette',
-  'models/helloWorld',
   'templates'
 ],
 
-function (Marionette, HelloWorld, templates) {
+function (Marionette, templates) {
   'use strict';
 
   return Marionette.ItemView.extend({
@@ -13,7 +12,6 @@ function (Marionette, HelloWorld, templates) {
 
     initialize: function () {
       console.log('initialize: helloWorldItemView');
-      this.model = new HelloWorld();
     }
   });
 });
