@@ -35,6 +35,9 @@ require.config({
         text: '../bower_components/requirejs-text/text',
         tmpl: "../templates",
 
+        /* requirejs-plugins */
+        json: '../bower_components/requirejs-plugins/src/json',
+
         /* handlebars from the require handlerbars plugin below */
         handlebars: '../bower_components/require-handlebars-plugin/Handlebars',
         hbs: '../bower_components/requirejs-hbs/hbs'
