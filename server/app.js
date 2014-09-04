@@ -29,21 +29,53 @@ router.get('/', function(request, response) {
   response.json({ message: 'hooray! welcome to our api!' });
 });
 
-// Get a list of articles
-router.route('/articles')
+// Get a list of libraries
+router.route('/libraries')
   .get(function(request, response) {
     response.json([
       { 
-        title : 'Title 1',
-        date : 'now',
-        description : 'Description',
-        author : 'Mickey' 
+        name : 'HTML5 Boilerplate',
+        url : 'http://www.w3.org/TR/html5/'
       },
       {
-        title : 'Title 2',
-        date : 'Saturday',
-        description : 'Description 2',
-        author : 'Donald' 
+        name : 'jQuery',
+        url : 'http://jquery.com/'
+      },
+      {
+        name : 'Backbone.js',
+        url : 'http://backbonejs.org/'
+      },
+      {
+        name : 'Marionette.js',
+        url : 'http://marionettejs.com/'
+      },
+      {
+        name : 'Lo-Dash',
+        url : 'http://lodash.com/'
+      },
+      {
+        name : 'Handlebars.js',
+        url : 'http://handlebarsjs.com/'
+      },
+      {
+        name : 'RequireJS',
+        url : 'http://requirejs.org/'
+      },
+      {
+        name : 'Express',
+        url : 'https://www.npmjs.org/package/express'
+      },
+      {
+        name : 'Mocha',
+        url : 'http://visionmedia.github.io/mocha/'
+      },
+      {
+        name : 'Sinon.JS',
+        url : 'http://sinonjs.org/'
+      },
+      {
+        name : 'chaijs',
+        url : 'http://chaijs.com/'
       }
     ]); 
   });
