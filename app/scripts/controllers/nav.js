@@ -1,11 +1,12 @@
 define([
-  'backbone',
   'marionette',
   'views/helloWorldItemView',
-  'views/librariesCompositeView'
+  'views/librariesCompositeView',
+  'models/helloWorldModel',
+  'models/librariesCollection'
 ],
 
-function (Backbone, Marionette, HelloWorldItemView, LibrariesCompositeView) {
+function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldModel, LibrariesCollection) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -14,15 +15,15 @@ function (Backbone, Marionette, HelloWorldItemView, LibrariesCompositeView) {
     },
 
     home: function () {
-      var fakeCollection = new Backbone.Collection([
-        {name: "HTML5 Boilerplate"},
-        {name: "jQuery"},
-        {name: "Backbone.js"}
-      ]);
-      this.contentRegion.show(new LibrariesCompositeView({
-        collection: fakeCollection
+      this.contentRegion.show(new HelloWorldItemView({
+        model: new HelloWorldModel()
       }));
-      // this.contentRegion.show(new HelloWorldItemView());
+    },
+
+    libraries: function () {
+      this.contentRegion.show(new LibrariesCompositeView({
+        collection: new LibrariesCollection()
+      }));
     }
   });
 
