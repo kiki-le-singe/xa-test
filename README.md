@@ -50,7 +50,7 @@ Runs tests located in `/tests/js/spec`.
 
 ## API
 
-By default the root access for the API is http://localhost:9000/api. Available example: http://localhost:9000/api/articles
+By default the root access for the API is http://localhost:9000/api. Available example: http://localhost:9000/api/libraries
 
 ## Tests
 
