@@ -62,7 +62,7 @@ The library used for tests are :
 
 ## App configuration
 
-The configuration of the application is located in `/app/configs`
+The configuration of the application is located in `/app/config`
 
 ## Sources
 
