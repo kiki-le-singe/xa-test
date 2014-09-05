@@ -36,6 +36,8 @@ Then serve the app on `localhost:9000` and opens your default browser
 
 Runs tests located in `/tests/js/spec`.
 
+> You can access tests in your browser, simply create a vhost.
+
 ## Included JavaScript libraries
 
  * [Backbone.js](http://backbonejs.org/)
