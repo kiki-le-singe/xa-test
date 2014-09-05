@@ -1,6 +1,6 @@
 define([
   'backbone',
-  'json!configs/api.json',
+  'json!config/api.json',
   'models/libraryModel'
 ],
 
