@@ -15,7 +15,7 @@ function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldMode
     },
 
     home: function () {
-      this.contentRegion.show(new HelloWorldItemView({
+      return this.contentRegion.show(new HelloWorldItemView({
         model: new HelloWorldModel()
       }));
     },
