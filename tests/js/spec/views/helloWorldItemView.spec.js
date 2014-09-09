@@ -37,7 +37,7 @@ function (HelloWorldModel, HelloWorldItemView, templates) {
 
 	  it("should render a div element with 'hello-world' class name", sinon.test(function () {
 	    var $el = this.view.render().$el;
-	    $el.hasClass('hello-world').should.be.true;
+	    $el.should.have.class('hello-world');
 	  }));
 
 	  it("should contain some texts", sinon.test(function () {
