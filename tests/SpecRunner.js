@@ -57,6 +57,7 @@ function (require, Marionette, chai, chaiJquery, sinon, sinonChai) {
   chai.use(sinonChai);
 
   require([
+    'tests/js/spec/controllers/nav.spec',
     'tests/js/spec/views/helloWorldItemView.spec'
   ], function () {
     mocha.run();
