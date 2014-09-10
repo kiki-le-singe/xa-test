@@ -9,6 +9,8 @@ function (Marionette, LibraryItemView, templates) {
 
   return Marionette.ItemView.extend({
     template: templates['library'],
+    tagName: 'li',
+    className: 'library',
 
     initialize: function () {
       console.log('initialize: libraryItemView');
