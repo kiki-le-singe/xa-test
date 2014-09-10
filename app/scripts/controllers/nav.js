@@ -21,7 +21,7 @@ function (Marionette, HelloWorldItemView, LibrariesCompositeView, HelloWorldMode
     },
 
     libraries: function () {
-      this.contentRegion.show(new LibrariesCompositeView({
+      return this.contentRegion.show(new LibrariesCompositeView({
         collection: new LibrariesCollection()
       }));
     }
