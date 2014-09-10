@@ -52,6 +52,24 @@ function ($, Marionette, NavController) {
 				$el.should.contain("Enjoy coding!");
 			}));
 	    });
+
+	    describe('libraries()', function () {
+			it("should render the libraries view", sinon.test(function () {
+				var view = this.controller.libraries().currentView;
+				var $el = view.$el;
+
+				$el.should.exist; // https://github.com/chaijs/chai-jquery#exist
+				$el.should.have('ul.libraries'); // https://github.com/chaijs/chai-jquery#haveselector
+			}));
+
+			it("should render the libraries item view", sinon.test(function () {
+				var view = this.controller.libraries().currentView;
+				var $el = view.$el;
+
+				// @TODO : Work in progress...
+				// $el.should.have('ul.libraries > li.library'); // https://github.com/chaijs/chai-jquery#haveselector
+			}));
+	    });
     });
   });
 });
