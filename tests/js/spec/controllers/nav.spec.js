@@ -38,8 +38,8 @@ function ($, Marionette, NavController) {
 				var $el = view.$el;
 
 				$el.should
-					.exist.and
-					.have.class('hello-world');
+					.exist.and // https://github.com/chaijs/chai-jquery#exist
+					.have.class('hello-world'); // https://github.com/chaijs/chai-jquery#classclassname
 			}));
 
 			it("should contain some texts", sinon.test(function () {
