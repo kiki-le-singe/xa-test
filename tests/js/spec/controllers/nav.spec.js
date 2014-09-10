@@ -36,12 +36,16 @@ function ($, Marionette, NavController) {
 			it("should render the home view", sinon.test(function () {
 				var view = this.controller.home().currentView;
 				var $el = view.$el;
-				$el.should.have.class('hello-world');
+
+				$el.should
+					.exist.and
+					.have.class('hello-world');
 			}));
 
 			it("should contain some texts", sinon.test(function () {
 				var view = this.controller.home().currentView;
 				var $el = view.$el;
+
 				$el.should.contain('CONGRATS!');
 				$el.should.contain('Welcome in my "Marionette Boilerplate" project !');
 				$el.should.contain('Play with this boilerplate and... Have fun!');
