@@ -1,10 +1,11 @@
 define([
-  'jquery',
+  'backbone',
   'marionette',
-  'controllers/nav'
+  'controllers/nav',
+  'models/librariesCollection'
 ],
 
-function ($, Marionette, NavController) {
+function (Backbone, Marionette, NavController, LibrariesCollection) {
   'use strict';
 
   describe('NavController', function () {
@@ -14,13 +15,31 @@ function ($, Marionette, NavController) {
     var $div = $('div');
     $div.attr({id: 'content'});
 
+	var librariesMock = [
+      { 
+        name : 'HTML5 Boilerplate',
+        url : 'http://www.w3.org/TR/html5/'
+      },
+      {
+        name : 'jQuery',
+        url : 'http://jquery.com/'
+      },
+      {
+        name : 'Backbone.js',
+        url : 'http://backbonejs.org/'
+      }
+	];
+
+	before(function () {
+		this.collection = new LibrariesCollection(librariesMock);
+	});
+
 	beforeEach(function () {
 		$('body').append($div);
 
 		var region = new Marionette.Region({
 			el: '#content'
 		});
-
 		this.controller = new NavController({contentRegion: region});
 	});
 
@@ -65,9 +84,12 @@ function ($, Marionette, NavController) {
 			it("should render the libraries item view", sinon.test(function () {
 				var view = this.controller.libraries().currentView;
 				var $el = view.$el;
+				// sets the collection of the view with the fake collection
+				view.collection = this.collection;
+				// and rerender the view (because it was rendered a first time by the region)
+				view.render();
 
-				// @TODO : Work in progress...
-				// $el.should.have('ul.libraries > li.library'); // https://github.com/chaijs/chai-jquery#haveselector
+				$el.should.have('ul.libraries li.library'); // https://github.com/chaijs/chai-jquery#haveselector
 			}));
 	    });
     });
