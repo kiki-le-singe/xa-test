@@ -35,6 +35,9 @@ require.config({
         text: '../bower_components/requirejs-text/text',
         tmpl: "../templates",
 
+        /* Helpers */
+        helpersHBS: "helpers/helpers",
+
         /* requirejs-plugins */
         json: '../bower_components/requirejs-plugins/src/json',
 
