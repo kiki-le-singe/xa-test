@@ -1,12 +1,13 @@
 define([
 	'marionette',
 	'controllers/nav',
+	'views/menuItemView',
 	'routers/routers',
 	'vent',
 	'templates'
 ],
 
-function (Marionette, NavController, Routers, Vent, templates) {
+function (Marionette, NavController, MenuItemView, Routers, Vent, templates) {
   'use strict';
 
 	var App = new Marionette.Application();
@@ -23,6 +24,9 @@ function (Marionette, NavController, Routers, Vent, templates) {
 		this.routers = new Routers({
 			controller: new NavController({contentRegion: App.content})
 		});
+
+		this.header.show(new MenuItemView());
+
 		Vent.trigger("APP:START");
 	});
 
