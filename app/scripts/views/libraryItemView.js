@@ -8,7 +8,7 @@ function (Marionette, LibraryItemView, templates) {
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: templates['library'],
+    template: templates.library,
     tagName: 'li',
     className: 'library',
 
