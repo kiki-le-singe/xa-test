@@ -1,8 +1,9 @@
 require([
 	'backbone',
+	'helpersHBS',
 	'app'
 ],
-function (Backbone, App) {
+function (Backbone, helpersHBS, App) {
   'use strict';
 
 	App.start();
