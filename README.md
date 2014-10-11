@@ -21,8 +21,8 @@
 
 ## Installation
 
-* `$ git clone git@github.com/kiki-le-singe/read-list.git`
-* `$ cd read-list`
+* `$ git clone git@github.com:kiki-le-singe/marionette-boilerplate.git`
+* `$ cd marionette-boilerplate`
 * `$ npm install`
 * `$ bower install`
 
