@@ -9,7 +9,7 @@
  * [nodejs](http://nodejs.org/)
  * [GruntJS](http://gruntjs.com/)
  * [bower](http://bower.io/)
- * [compass](http://compass-style.org/): **Only for build**
+ * [compass](http://compass-style.org/)
 
 ## Optional
 
@@ -78,3 +78,7 @@ Handlebars helpers is located in `/app/scripts/helpers`
 
  * [Yeoman](http://yeoman.io/)
  * [generator-marionette](https://github.com/mrichard/generator-marionette): **Marionette Boilerplate** is based on it
+
+## Tips and tricks
+
+ * [mongo-express](https://www.npmjs.org/package/mongo-express): If you use MongoDB, look at this node modules. It's an convenient admin interface for MongoDB.
