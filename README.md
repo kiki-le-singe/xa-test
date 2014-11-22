@@ -32,6 +32,10 @@
 
 Then serve the app on `localhost:9000` and opens your default browser
 
+* `$ grunt serve --stub`
+
+Makes the same thing that the above command, except that the 'stub' option allows to enabled or not the retrieving of fake datas.
+
 * `$ grunt test`
 
 Runs tests located in `/tests/js/spec`.
