@@ -4,6 +4,9 @@
 // BASE SETUP //
 ////////////////
 
+// Stubs //
+var libraries = require('./stubs/libraries.json');
+
 // Module dependencies.
 var application_root = __dirname,
     express = require('express'), // Web framework
@@ -34,6 +37,10 @@ router.get('/', function(request, response) {
 // Get a list of libraries
 router.route('/libraries')
   .get(function(request, response) {
+    if (stubArg) { // if stub enabled
+      return response.json(libraries);
+    }
+
     response.json([
       {
         name : 'HTML5 Boilerplate',
@@ -50,34 +57,6 @@ router.route('/libraries')
       {
         name : 'Marionette.js',
         url : 'http://marionettejs.com/'
-      },
-      {
-        name : 'Lo-Dash',
-        url : 'http://lodash.com/'
-      },
-      {
-        name : 'Handlebars.js',
-        url : 'http://handlebarsjs.com/'
-      },
-      {
-        name : 'RequireJS',
-        url : 'http://requirejs.org/'
-      },
-      {
-        name : 'Express',
-        url : 'https://www.npmjs.org/package/express'
-      },
-      {
-        name : 'Mocha',
-        url : 'http://visionmedia.github.io/mocha/'
-      },
-      {
-        name : 'Sinon.JS',
-        url : 'http://sinonjs.org/'
-      },
-      {
-        name : 'chaijs',
-        url : 'http://chaijs.com/'
       }
     ]);
   });
