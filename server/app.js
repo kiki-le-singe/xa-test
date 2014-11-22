@@ -11,7 +11,9 @@ var application_root = __dirname,
     path = require('path'), // Utilities for dealing with file paths
     mongoose = require('mongoose'), //MongoDB integration
     bodyParser = require('body-parser'),
-    port = process.env.PORT || 9000; // set our port
+    port = process.env.PORT || 9000, // set our port
+    args = process.argv,
+    stubArg = (args[2] === 'true');
 
 // parses request body and populates request.body
 app.use(bodyParser());
@@ -33,7 +35,7 @@ router.get('/', function(request, response) {
 router.route('/libraries')
   .get(function(request, response) {
     response.json([
-      { 
+      {
         name : 'HTML5 Boilerplate',
         url : 'http://www.w3.org/TR/html5/'
       },
@@ -77,7 +79,7 @@ router.route('/libraries')
         name : 'chaijs',
         url : 'http://chaijs.com/'
       }
-    ]); 
+    ]);
   });
 
 // all of our routes will be prefixed with /api
@@ -92,5 +94,3 @@ app.use('/api', router);
 app.listen(port, function() {
   console.log('Express server listening on port %d in %s node', port, app.settings.env);
 });
-
-

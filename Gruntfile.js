@@ -19,6 +19,14 @@ module.exports = function (grunt) {
         dist: 'dist'
     };
 
+    //////////////////
+    // grunt.option //
+    //////////////////
+    var stubOption = grunt.option('stub');
+
+    //////////////////
+    // grunt.config //
+    //////////////////
     grunt.initConfig({
         yeoman: yeomanConfig,
 
@@ -68,7 +76,8 @@ module.exports = function (grunt) {
             },
             dev: {
                 options: {
-                    script: 'server/app.js'
+                    script: 'server/app.js',
+                    args: [stubOption] // pass arguments to node
                 }
             },
             prod: {
