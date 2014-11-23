@@ -262,6 +262,23 @@ module.exports = function (grunt) {
                 },
                 src: ['tests/index.html']
             }
+        },
+
+        requirejs: {
+          compile: {
+            options: {
+              baseUrl: "<%= yeoman.app %>/",
+              name: "scripts/init",
+              preserveLicenseComments: false,
+              optimize: 'uglify2',
+              wrapShim: true,
+              paths: {
+                requireLib: 'bower_components/requirejs/require'
+              },
+              include: 'requireLib',
+              out: "<%= yeoman.dist %>/js/script.js"
+            }
+          }
         }
     });
 
