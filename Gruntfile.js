@@ -308,9 +308,20 @@ module.exports = function (grunt) {
         ]);
     });
 
-    grunt.registerTask('build', [
-        'createDefaultTemplate',
-        'handlebars',
+    // grunt.registerTask('build', [
+    //     'createDefaultTemplate',
+    //     'handlebars',
+    //     'compass:dist',
+    //     'useminPrepare',
+    //     'requirejs',
+    //     'htmlmin',
+    //     'concat',
+    //     'cssmin',
+    //     'uglify',
+    //     'copy',
+    //     'usemin'
+    // ]);
+
     grunt.registerTask('dist', [
         'clean:dist',
         'compass:dist',
