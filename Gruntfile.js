@@ -317,6 +317,9 @@ module.exports = function (grunt) {
         'cssmin:dist',
         'requirejs'
     ]);
+
+    grunt.registerTask('release', [
+        'clean:dist'
     ]);
 
 };
