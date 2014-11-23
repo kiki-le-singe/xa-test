@@ -144,6 +144,7 @@ module.exports = function (grunt) {
             }
         },
 
+        /*
         // require
         requirejs: {
             dist: {
@@ -175,7 +176,7 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        },
+        },*/
 
         useminPrepare: {
             html: '<%= yeoman.app %>/index.html',
