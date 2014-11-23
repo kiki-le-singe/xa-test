@@ -311,15 +311,12 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'createDefaultTemplate',
         'handlebars',
+    grunt.registerTask('dist', [
+        'clean:dist',
         'compass:dist',
-        'useminPrepare',
-        'requirejs',
-        'htmlmin',
-        'concat',
-        'cssmin',
-        'uglify',
-        'copy',
-        'usemin'
+        'cssmin:dist',
+        'requirejs'
+    ]);
     ]);
 
 };
