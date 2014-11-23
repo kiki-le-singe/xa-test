@@ -33,8 +33,8 @@ module.exports = function (grunt) {
         // watch list
         watch: {
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass']
+                files: ['<%= yeoman.app %>/styles/**/*.scss'],
+                tasks: ['compass:dev']
             },
             livereload: {
                 files: [
@@ -120,21 +120,26 @@ module.exports = function (grunt) {
 
         // compass
         compass: {
-            options: {
+            // options: {
+            //     sassDir: '<%= yeoman.app %>/styles',
+            //     cssDir: '.tmp/styles',
+            //     imagesDir: '<%= yeoman.app %>/images',
+            //     javascriptsDir: '<%= yeoman.app %>/scripts',
+            //     fontsDir: '<%= yeoman.app %>/styles/fonts',
+            //     importPath: '<%= yeoman.app %>/bower_components',
+            //     relativeAssets: true
+            // },
+            dist: {
+              options: {
                 sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/bower_components',
-                relativeAssets: true
+                cssDir: '<%= yeoman.tmp %>/styles/css'
+              }
             },
-            dist: {},
-            dev: {                    // Another target
+            dev: { // Another target
               options: {
                 debugInfo: true,
                 sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '<%= yeoman.app %>/styles'
+                cssDir: '<%= yeoman.app %>/styles/css'
               }
             }
         },
