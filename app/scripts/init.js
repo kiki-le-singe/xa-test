@@ -6,18 +6,11 @@ require.config({
     deps: ['main'],
 
     shim: {
-        jquery: {
-            exports: '$'
-        },
-        underscore: {
-            exports: '_'
-        },
         backbone: {
-            deps: [
-                'underscore',
-                'jquery'
-            ],
-            exports: 'Backbone'
+            deps: ['underscore', 'jquery']
+        },
+        marionette: {
+          deps: ['backbone']
         }
     },
 
