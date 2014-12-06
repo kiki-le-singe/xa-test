@@ -280,6 +280,14 @@ module.exports = function (grunt) {
               out: "<%= yeoman.dist %>/js/script.js"
             }
           }
+        },
+
+        processhtml: {
+          dist: {
+            files: {
+              '<%= yeoman.dist %>/index.html': ['<%= yeoman.app %>/index.html']
+            }
+          }
         }
     });
 
@@ -327,7 +335,8 @@ module.exports = function (grunt) {
         'clean:dist',
         'compass:dist',
         'cssmin:dist',
-        'requirejs'
+        'requirejs',
+        'processhtml:dist'
     ]);
 
     grunt.registerTask('release', [
