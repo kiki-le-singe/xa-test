@@ -94,7 +94,7 @@ module.exports = function (grunt) {
         },
 
         clean: {
-            dist: ['.tmp', '<%= yeoman.dist %>'],
+            dist: ['<%= yeoman.tmp %>', '<%= yeoman.dist %>'],
             server: '.tmp'
         },
 
