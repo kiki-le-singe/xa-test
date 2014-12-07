@@ -202,7 +202,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // handlebars
         handlebars: {
             compile: {
                 options: {
