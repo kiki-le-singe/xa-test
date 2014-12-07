@@ -50,13 +50,6 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
-            /* not used at the moment
-            handlebars: {
-                files: [
-                    '<%= yeoman.app %>/templates/*.hbs'
-                ],
-                tasks: ['handlebars']
-            }*/
         },
 
         // testing server
@@ -144,40 +137,6 @@ module.exports = function (grunt) {
               }
             }
         },
-
-        /*
-        // require
-        requirejs: {
-            dist: {
-                // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
-                options: {
-                    // `name` and `out` is set by grunt-usemin
-                    baseUrl: 'app/scripts',
-                    optimize: 'none',
-                    paths: {
-                        'templates': '../../.tmp/scripts/templates'
-                    },
-                    // TODO: Figure out how to make sourcemaps work with grunt-usemin
-                    // https://github.com/yeoman/grunt-usemin/issues/30
-                    //generateSourceMaps: true,
-                    // required to support SourceMaps
-                    // http://requirejs.org/docs/errors.html#sourcemapcomments
-                    preserveLicenseComments: false,
-                    useStrict: true,
-                    wrap: true,
-                    //uglify2: {} // https://github.com/mishoo/UglifyJS2
-                    pragmasOnSave: {
-                        //removes Handlebars.Parser code (used to compile template strings) set
-                        //it to `false` if you need to parse template strings even after build
-                        excludeHbsParser : true,
-                        // kills the entire plugin set once it's built.
-                        excludeHbs: true,
-                        // removes i18n precompiler, handlebars and json2
-                        excludeAfterBuild: true
-                    }
-                }
-            }
-        },*/
 
         useminPrepare: {
             html: '<%= yeoman.app %>/index.html',
