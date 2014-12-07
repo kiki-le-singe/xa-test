@@ -206,6 +206,10 @@ module.exports = function (grunt) {
         handlebars: {
             compile: {
                 options: {
+                    processName: function(filePath) {
+                      var matches = filePath.match(new RegExp('app\/templates\/(.*).hbs'));
+                      return matches ? matches[1] : filePath;
+                    },
                     namespace: 'templates',
                     amd: true
                 },
