@@ -206,11 +206,11 @@ module.exports = function (grunt) {
         handlebars: {
             compile: {
                 options: {
-                    namespace: 'JST',
+                    namespace: 'templates',
                     amd: true
                 },
                 files: {
-                    '.tmp/scripts/templates.js': ['templates/**/*.hbs']
+                    '<%= yeoman.tmp %>/scripts/templates.js': ['<%= yeoman.app %>/templates/**/*.hbs']
                 }
             }
         },
@@ -234,7 +234,8 @@ module.exports = function (grunt) {
               preserveLicenseComments: false,
               optimize: 'uglify2',
               paths: {
-                requireLib: '../bower_components/requirejs/require'
+                requireLib: '../bower_components/requirejs/require',
+                templates: '../../<%= yeoman.tmp %>/scripts/templates'
               },
               include: 'requireLib',
               wrapShim: true
@@ -254,7 +255,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['mocha']);
 
     grunt.registerTask('createDefaultTemplate', function () {
-        grunt.file.write('.tmp/scripts/templates.js', 'this.JST = this.JST || {};');
+        grunt.file.write('.tmp/scripts/templates.js', 'this.templates = this.templates || {};');
     });
 
     // starts express server with live testing via testserver
@@ -292,9 +293,11 @@ module.exports = function (grunt) {
     // ]);
 
     grunt.registerTask('dist', [
+        'createDefaultTemplate',
         'clean:dist',
         'compass:dist',
         'cssmin:dist',
+        'handlebars',
         'requirejs',
         'processhtml:dist'
     ]);
