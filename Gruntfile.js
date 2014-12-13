@@ -224,7 +224,7 @@ module.exports = function (grunt) {
         processhtml: {
           dist: {
             files: {
-              '<%= yeoman.dist %>/index.html': ['<%= yeoman.app %>/index.html']
+              '<%= yeoman.tmp %>/index.html': ['<%= yeoman.app %>/index.html']
             }
           }
         }
