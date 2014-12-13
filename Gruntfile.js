@@ -272,7 +272,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('dist', [
-        'createDefaultTemplate',
+        'createDefaultTemplate', // is it helpful ?
         'clean:dist',
         'compass:dist',
         'cssmin:dist',
