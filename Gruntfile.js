@@ -262,38 +262,14 @@ module.exports = function (grunt) {
     });
 
     // starts express server with live testing via testserver
-    grunt.registerTask('serve', function (target) {
-
-        // what is this??
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-        }
-
-        grunt.option('force', true);
-
-        grunt.task.run([
-            'clean:server',
-            'compass:dev',
-            'connect:testserver',
-            'express:dev',
-            'open',
-            'watch'
-        ]);
-    });
-
-    // grunt.registerTask('build', [
-    //     'createDefaultTemplate',
-    //     'handlebars',
-    //     'compass:dist',
-    //     'useminPrepare',
-    //     'requirejs',
-    //     'htmlmin',
-    //     'concat',
-    //     'cssmin',
-    //     'uglify',
-    //     'copy',
-    //     'usemin'
-    // ]);
+    grunt.registerTask('serve', [
+      'clean:server',
+      'compass:dev',
+      'connect:testserver',
+      'express:dev',
+      'open',
+      'watch'
+    ]);
 
     grunt.registerTask('dist', [
         'createDefaultTemplate',
