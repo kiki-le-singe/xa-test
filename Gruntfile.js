@@ -251,8 +251,11 @@ module.exports = function (grunt) {
       'connect:testserver',
       'express:dev',
       'open',
+      'lint',
       'watch'
     ]);
+
+    grunt.registerTask('lint', ['jshint', 'jscs'] );
 
     grunt.registerTask('dist', [
         'createDefaultTemplate', // is it helpful ?
