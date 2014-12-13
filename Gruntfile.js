@@ -113,6 +113,13 @@ module.exports = function (grunt) {
             ]
         },
 
+        jscs: {
+          options: {
+            config: '.jscs.json'
+          },
+          src: '<%= jshint.all %>'
+        },
+
         // compass
         compass: {
             // options: {
