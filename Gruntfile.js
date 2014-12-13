@@ -18,6 +18,7 @@ module.exports = function (grunt) {
         app: 'app',
         dist: 'dist',
         tmp: '.tmp',
+        tests: 'tests/js/spec',
     };
 
     //////////////////
