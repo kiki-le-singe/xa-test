@@ -1,34 +1,34 @@
 define([
-	'marionette',
-	'controllers/nav',
-	'views/menuItemView',
-	'routers/routers',
-	'vent',
-	'templates'
+  'marionette',
+  'controllers/nav',
+  'views/menuItemView',
+  'routers/routers',
+  'vent',
+  'templates'
 ],
 
 function (Marionette, NavController, MenuItemView, Routers, Vent, templates) {
   'use strict';
 
-	var App = new Marionette.Application();
+  var App = new Marionette.Application();
 
-	/* Add application regions here */
-	App.addRegions({
-		header: '#header',
-		content: '#content',
-		footer: '#footer'
-	});
+  /* Add application regions here */
+  App.addRegions({
+    header: '#header',
+    content: '#content',
+    footer: '#footer'
+  });
 
-	/* Add initializers here */
-	App.addInitializer(function () {
-		this.routers = new Routers({
-			controller: new NavController({contentRegion: App.content})
-		});
+  /* Add initializers here */
+  App.addInitializer(function () {
+    this.routers = new Routers({
+      controller: new NavController({contentRegion: App.content})
+    });
 
-		this.header.show(new MenuItemView());
+    this.header.show(new MenuItemView());
 
-		Vent.trigger("APP:START");
-	});
+    Vent.trigger('APP:START');
+  });
 
-	return App;
+  return App;
 });
