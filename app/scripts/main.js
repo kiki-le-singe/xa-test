@@ -1,11 +1,11 @@
 require([
-	'backbone',
-	'helpersHBS',
-	'app'
+  'backbone',
+  'helpersHBS',
+  'app'
 ],
 function (Backbone, helpersHBS, App) {
   'use strict';
 
-	App.start();
+  App.start();
   Backbone.history.start();
 });

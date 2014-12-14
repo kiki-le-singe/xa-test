@@ -1,6 +1,6 @@
 require.config({
 
-    baseUrl: "/scripts",
+    baseUrl: '/scripts',
 
     /* starting point for application */
     deps: ['main'],
@@ -26,10 +26,10 @@ require.config({
 
         /* Alias text.js for template loading and shortcut the templates dir to tmpl */
         text: '../bower_components/requirejs-text/text',
-        tmpl: "../templates",
+        tmpl: '../templates',
 
         /* Helpers */
-        helpersHBS: "helpers/helpers",
+        helpersHBS: 'helpers/helpers',
 
         /* requirejs-plugins */
         json: '../bower_components/requirejs-plugins/src/json',
