@@ -3,11 +3,10 @@ define([
   'controllers/nav',
   'views/menuItemView',
   'routers/routers',
-  'vent',
-  'templates'
+  'vent'
 ],
 
-function (Marionette, NavController, MenuItemView, Routers, Vent, templates) {
+function (Marionette, NavController, MenuItemView, Routers, Vent) {
   'use strict';
 
   var App = new Marionette.Application();
