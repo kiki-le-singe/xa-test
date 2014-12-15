@@ -26,6 +26,6 @@ module.exports = function (grunt, options) {
       'processhtml:dist',
       'htmlmin:dist'
     ],
-    release: ['clean:dist']
+    release: ['dist', 'compress', 'clean:dist']
   };
 };
