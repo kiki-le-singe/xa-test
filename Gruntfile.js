@@ -8,6 +8,7 @@ module.exports = function (grunt) {
 
   // configurable paths
   var yeomanConfig = {
+    pkg: grunt.file.readJSON('package.json'),
     app: 'app',
     dist: 'dist',
     tmp: '.tmp',
