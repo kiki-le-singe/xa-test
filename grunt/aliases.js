@@ -7,7 +7,6 @@ module.exports = function (grunt, options) {
     },
     test: ['mocha'],
     serve: [
-      'clean:server',
       'compass:dev',
       'connect:testserver',
       'express:dev',
