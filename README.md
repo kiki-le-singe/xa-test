@@ -42,6 +42,14 @@ Runs tests located in `/tests/js/spec`.
 
 > You can access tests in your browser, simply create a vhost.
 
+* `$ grunt dist`
+
+Build the application in `/dist`.
+
+* `$ grunt release`
+
+Create a .tgz archive named `marionette-boilerplate-[version]`.
+
 ## Included JavaScript libraries
 
  * [Backbone.js](http://backbonejs.org/)
