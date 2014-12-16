@@ -10,6 +10,6 @@ module.exports = {
     'Gruntfile.js',
     '<%= yeoman.app %>/scripts/{,*/}*.js',
     '!<%= yeoman.app %>/scripts/vendor/*',
-    'tests/{,*/}*.spec.js'
+    '<%= yeoman.tests %>/{,*/}*.spec.js'
   ]
 };
