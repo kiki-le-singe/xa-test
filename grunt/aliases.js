@@ -5,7 +5,7 @@ module.exports = function (grunt, options) {
     createDefaultTemplate: function () {
       grunt.file.write('.tmp/scripts/templates.js', 'this.templates = this.templates || {};');
     },
-    test: ['mocha'],
+    test: ['mocha', 'lint'],
     serve: [
       'compass:dev',
       'connect:testserver',
