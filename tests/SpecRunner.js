@@ -10,7 +10,7 @@ require.config({
     handlebars: '../bower_components/require-handlebars-plugin/Handlebars',
     hbs: '../bower_components/requirejs-hbs/hbs',
     text: '../bower_components/requirejs-text/text',
-    tmpl: "../templates",
+    tmpl: '../templates',
     json: '../bower_components/requirejs-plugins/src/json',
     tests: '../../tests',
     chai: '../bower_components/chai/chai',
@@ -43,14 +43,15 @@ require.config({
 });
 
 require([
-  'require', 
-  'marionette', 
-  'chai', 
-  'chai-jquery', 
-  'sinonjs', 
+  'require',
+  'marionette',
+  'chai',
+  'chai-jquery',
+  'sinonjs',
   'sinon-chai'
 ],
 function (require, Marionette, chai, chaiJquery, sinon, sinonChai) {
+  'use strict';
 
   chai.should();
   chai.use(chaiJquery);
@@ -60,7 +61,8 @@ function (require, Marionette, chai, chaiJquery, sinon, sinonChai) {
     'tests/js/spec/controllers/nav.spec',
     'tests/js/spec/views/helloWorldItemView.spec'
   ], function () {
+
     mocha.run();
-  })
+  });
 
 });
