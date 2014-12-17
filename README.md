@@ -52,7 +52,7 @@ Create a .tgz archive named `marionette-boilerplate-[version]`.
 
 * `$ grunt docs`
 
-Generates a html doc of your documented code `/docs`.
+Generates a html doc of your documented code in `/docs` and open it in your browser.
 
 ## Included JavaScript libraries
 
