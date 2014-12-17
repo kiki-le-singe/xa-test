@@ -94,3 +94,4 @@ Handlebars helpers is located in `/app/scripts/helpers`
 ## Tips and tricks
 
  * [mongo-express](https://www.npmjs.org/package/mongo-express): If you use MongoDB, look at this node modules. It's an convenient admin interface for MongoDB.
+ * To enjoy livereload don't forget download the chrome plugin.
