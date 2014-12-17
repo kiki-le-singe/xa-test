@@ -50,6 +50,10 @@ Build the application in `/dist`.
 
 Create a .tgz archive named `marionette-boilerplate-[version]`.
 
+* `$ grunt docs`
+
+Generates a html doc of your documented code `/docs`.
+
 ## Included JavaScript libraries
 
  * [Backbone.js](http://backbonejs.org/)
