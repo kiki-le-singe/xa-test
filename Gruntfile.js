@@ -13,6 +13,7 @@ module.exports = function (grunt) {
     dist: 'dist',
     tmp: '.tmp',
     tests: 'tests/js/spec',
+    docs: 'docs',
   };
 
   var config = {
