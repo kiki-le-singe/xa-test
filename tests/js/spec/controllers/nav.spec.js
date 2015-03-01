@@ -79,7 +79,7 @@ function (Backbone, Marionette, NavController, LibrariesCollection) {
 
           /* jshint -W030 */
           $el.should.exist; // https://github.com/chaijs/chai-jquery#exist
-          $el.should.have('ul.libraries'); // https://github.com/chaijs/chai-jquery#haveselector
+          $el.should.descendants('ul.libraries'); // https://github.com/chaijs/chai-jquery#descendantsselector
         }));
 
         it('should render the libraries item view', sinon.test(function () {
@@ -90,7 +90,8 @@ function (Backbone, Marionette, NavController, LibrariesCollection) {
           // and rerender the view (because it was rendered a first time by the region)
           view.render();
 
-          $el.should.have('ul.libraries li.library'); // https://github.com/chaijs/chai-jquery#haveselector
+          // https://github.com/chaijs/chai-jquery#descendantsselector
+          $el.should.descendants('ul.libraries li.library');
         }));
       });
     });
