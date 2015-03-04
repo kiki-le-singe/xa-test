@@ -1,29 +1,33 @@
-define([
-  'marionette',
-  'controllers/nav',
-  'views/menuItemView',
-  'routers/routers'
-],
-
-function (Marionette, NavController, MenuItemView, Routers) {
+define(function (require) {
   'use strict';
+
+  var Marionette = require('marionette');
+  var NavController = require('controllers/nav');
+  var RootLayoutView = require('views/rootLayoutView');
+  var MenuItemView = require('views/menuItemView');
+  var Routers = require('routers/routers');
 
   var App = new Marionette.Application();
 
-  /* Add application regions here */
-  App.addRegions({
-    header: '#header',
-    content: '#content',
-    footer: '#footer'
-  });
-
   // When the application is ready
   App.on('start', function () {
+    var rootLayoutView = new RootLayoutView();
+    var options = {
+      contentRegion: rootLayoutView.content
+    };
+
+    rootLayoutView.render();
+    rootLayoutView.header.show(new MenuItemView());
+
     this.routers = new Routers({
-      controller: new NavController({contentRegion: App.content})
+      controller: new NavController(options)
     });
 
-    this.header.show(new MenuItemView());
+    // load modules
+    // require(['#dialogs/index'], function (dialogs) {
+    //
+    //   dialogs({dialogsRegion: rootLayoutView.dialogs}).start();
+    // });
   });
 
   return App;
