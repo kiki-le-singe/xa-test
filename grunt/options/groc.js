@@ -1,6 +1,5 @@
 'use strict';
 
-// open app and test page
 module.exports = {
   options: {
     out: 'docs/'
