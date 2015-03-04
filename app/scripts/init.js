@@ -3,7 +3,7 @@ require.config({
     baseUrl: '/scripts',
 
     /* starting point for application */
-    deps: ['main'],
+    deps: ['index'],
 
     shim: {
         backbone: {
