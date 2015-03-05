@@ -10,7 +10,7 @@ module.exports = function (grunt, options) {
       'compass:dev',
       'connect:testserver',
       'express:dev',
-      'open',
+      'open:server',
       'lint',
       'watch'
     ],
