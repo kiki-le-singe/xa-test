@@ -20,8 +20,6 @@ module.exports = function (grunt) {
     yeoman: yeomanConfig
   };
 
-  grunt.initConfig(config);
-
   require('load-grunt-config')(grunt, {
     configPath: [
       path.join(process.cwd(), 'grunt'),
