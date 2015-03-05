@@ -54,6 +54,10 @@ Create a .tgz archive named `marionette-boilerplate-[version]`.
 
 Generates a html doc of your documented code in `/docs` and open it in your browser.
 
+* `$ grunt plato`
+
+Generate complexity analysis reports in `/reports` with [plato](https://github.com/es-analysis/plato).
+
 ## Included JavaScript libraries
 
  * [Backbone.js](http://backbonejs.org/)
@@ -62,7 +66,7 @@ Generates a html doc of your documented code in `/docs` and open it in your brow
  * [Backbone.wreqr](https://github.com/marionettejs/backbone.wreqr)
  * [Require.js](http://requirejs.org/)
  * [jQuery 2](http://jquery.com/)
- * [Lo-Dash](http://lodash.com/)
+ * [Lo-Dash V3](http://lodash.com/)
  * [Handlebars](http://handlebarsjs.com/)
  * [Modernizr](http://modernizr.com/)
 
