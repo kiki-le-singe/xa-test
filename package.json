@@ -17,6 +17,7 @@
     "node": ">= 0.10.23"
   },
   "files": [
+    "CHANGELOG.md",
     "README.md"
   ],
   "dependencies": {
