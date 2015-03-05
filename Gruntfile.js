@@ -26,6 +26,11 @@ module.exports = function (grunt) {
       path.join(process.cwd(), 'grunt/options')
     ],
     config: config,
-    init: true
+    init: true,
+    jitGrunt: {
+      staticMappings: { // https://github.com/shootaroo/jit-grunt#static-mappings
+        express: 'grunt-express-server'
+      }
+    }
   });
 };
