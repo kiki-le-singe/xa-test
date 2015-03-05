@@ -29,6 +29,7 @@ module.exports = function (grunt) {
     init: true,
     jitGrunt: {
       staticMappings: { // https://github.com/shootaroo/jit-grunt#static-mappings
+        changelog: 'grunt-conventional-changelog',
         express: 'grunt-express-server'
       }
     }
