@@ -18,6 +18,9 @@ require.config({
         jquery: '../bower_components/jquery/dist/jquery',
         underscore: '../bower_components/lodash/lodash',
         backbone: '../bower_components/backbone/backbone',
+  paths: {
+    // modules
+    '#hello': 'modules/hello',
 
         /* alias all marionette libs */
         marionette: '../bower_components/marionette/lib/core/backbone.marionette',

@@ -24,9 +24,13 @@ define(function (require) {
     });
 
     // load modules
-    // require(['#dialogs/index'], function (dialogs) {
+    require(['#hello/index'], function (hello) {
+
+      hello(options).start();
+    });
+    // require(['#hello/app'], function (hello) {
     //
-    //   dialogs({dialogsRegion: rootLayoutView.dialogs}).start();
+    //   hello(options).start();
     // });
   });
 
