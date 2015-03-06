@@ -1,45 +1,44 @@
 require.config({
 
-    baseUrl: '/scripts',
+  baseUrl: '/scripts',
 
-    /* starting point for application */
-    deps: ['index'],
+  /* starting point for application */
+  deps: ['index'],
 
-    shim: {
-        backbone: {
-            deps: ['underscore', 'jquery']
-        },
-        marionette: {
-          deps: ['backbone']
-        }
+  shim: {
+    backbone: {
+      deps: ['underscore', 'jquery']
     },
+    marionette: {
+      deps: ['backbone']
+    }
+  },
 
-    paths: {
-        jquery: '../bower_components/jquery/dist/jquery',
-        underscore: '../bower_components/lodash/lodash',
-        backbone: '../bower_components/backbone/backbone',
   paths: {
     // modules
     '#hello': 'modules/hello',
 
-        /* alias all marionette libs */
-        marionette: '../bower_components/marionette/lib/core/backbone.marionette',
-        'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
-        'backbone.radio': '../bower_components/backbone.radio/build/backbone.radio',
-        'backbone.babysitter': '../bower_components/backbone.babysitter/lib/backbone.babysitter',
+    jquery: '../bower_components/jquery/dist/jquery',
+    underscore: '../bower_components/lodash/lodash',
+    backbone: '../bower_components/backbone/backbone',
 
-        /* Alias text.js for template loading and shortcut the templates dir to tmpl */
-        text: '../bower_components/requirejs-text/text',
-        tmpl: '../templates',
+    /* alias all marionette libs */
+    marionette: '../bower_components/marionette/lib/core/backbone.marionette',
+    'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
+    'backbone.radio': '../bower_components/backbone.radio/build/backbone.radio',
+    'backbone.babysitter': '../bower_components/backbone.babysitter/lib/backbone.babysitter',
 
-        /* Helpers */
-        helpersHBS: 'helpers/helpers',
+    /* Alias text.js for template loading and shortcut the templates dir to tmpl */
+    text: '../bower_components/requirejs-text/text',
 
-        /* requirejs-plugins */
-        json: '../bower_components/requirejs-plugins/src/json',
+    /* Helpers */
+    helpersHBS: 'helpers/helpers',
 
-        /* handlebars from the require handlerbars plugin below */
-        handlebars: '../bower_components/handlebars/handlebars',
-        hbs: '../bower_components/requirejs-hbs/hbs'
-    }
+    /* requirejs-plugins */
+    json: '../bower_components/requirejs-plugins/src/json',
+
+    /* handlebars from the require handlerbars plugin below */
+    handlebars: '../bower_components/handlebars/handlebars',
+    hbs: '../bower_components/requirejs-hbs/hbs'
+  }
 });
