@@ -10,7 +10,7 @@ module.exports = {
     '<%= yeoman.app %>/*.html',
     '{.tmp,<%= yeoman.app %>}/styles/{,**/}*.css',
     '{.tmp,<%= yeoman.app %>}/scripts/{,**/}*.js',
-    '{.tmp,<%= yeoman.app %>}/templates/{,**/}*.hbs',
+    '{.tmp,<%= yeoman.app %>}/scripts/{,**/}*.hbs',
     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
     // 'test/spec/{,**/}*.js' TODO livereload the next new tests
     ],
