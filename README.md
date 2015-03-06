@@ -46,7 +46,7 @@ Runs tests located in `/tests/js/spec`.
 
 Build the application in `/dist`.
 
-* `$ grunt release`
+* `$ grunt build`
 
 Create a .tgz archive named `marionette-boilerplate-[version]`.
 
