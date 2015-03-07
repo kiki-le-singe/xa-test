@@ -1,26 +1,24 @@
 define([
+  'marionette',
   '#hello/controllers/nav',
   '#hello/routers/routers',
   'vent'
 ],
 
-function (NavController, Routers, vent) {
+function (Marionette, NavController, Routers, vent) {
   'use strict';
 
-  return function (options) {
-    options = options || {};
+  return Marionette.Object.extend({
 
-    return {
-      routers: function () {
-        return new Routers({
-          controller: new NavController(options)
-        });
-      },
+    initialize: function (options) {
+      options = options || {};
 
-      start: function () {
-        this.routers();
-        vent.trigger('module:hello:bootstrapped');
-      }
-    };
-  };
+      this.routers = new Routers({
+        controller: new NavController(options)
+      });
+
+      console.log('initialize: helloIndexObject');
+      vent.trigger('module:hello:bootstrapped');
+    }
+  });
 });
