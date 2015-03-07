@@ -10,15 +10,15 @@ function (Marionette, NavController, Routers) {
   return function (options) {
     options = options || {};
 
-    var App = new Marionette.Application();
+    var app = new Marionette.Application();
 
     // When the application is ready
-    App.on('start', function () {
+    app.on('start', function () {
       this.routers = new Routers({
         controller: new NavController(options)
       });
     });
 
-    return App;
+    return app;
   };
 });
