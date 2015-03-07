@@ -22,3 +22,26 @@ function (Marionette, NavController, Routers, vent) {
     }
   });
 });
+
+// define([
+//   'marionette',
+//   '#hello/app',
+//   'vent'
+// ],
+//
+// function (Marionette, app, vent) {
+//   'use strict';
+//
+//   return Marionette.Object.extend({
+//
+//     initialize: function (options) {
+//       options = options || {};
+//
+//       this.app = app(options);
+//       this.app.start();
+//
+//       console.log('initialize: helloIndexObject');
+//       vent.trigger('module:hello:bootstrapped');
+//     }
+//   });
+// });
