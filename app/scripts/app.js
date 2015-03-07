@@ -4,17 +4,16 @@ define([
   'views/rootLayoutView',
   'views/menuItemView',
   'routers/routers',
-  // '#hello/app'
   '#hello/index'
 ],
 
-function (Marionette, NavController, RootLayoutView, MenuItemView, Routers, hello) {
+function (Marionette, NavController, RootLayoutView, MenuItemView, Routers, Hello) {
   'use strict';
 
-  var App = new Marionette.Application();
+  var app = new Marionette.Application();
 
   // When the application is ready
-  App.on('start', function () {
+  app.on('start', function () {
     var rootLayoutView = new RootLayoutView();
     var options = {
       contentRegion: rootLayoutView.content
@@ -28,8 +27,8 @@ function (Marionette, NavController, RootLayoutView, MenuItemView, Routers, hell
     });
 
     // start modules
-    hello(options).start();
+    this.hello = new Hello(options);
   });
 
-  return App;
+  return app;
 });
