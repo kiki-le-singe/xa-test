@@ -1,11 +1,15 @@
-define(function (require) {
-  'use strict';
+define([
+  'marionette',
+  'controllers/nav',
+  'views/rootLayoutView',
+  'views/menuItemView',
+  'routers/routers',
+  // '#hello/app'
+  '#hello/index'
+],
 
-  var Marionette = require('marionette');
-  var NavController = require('controllers/nav');
-  var RootLayoutView = require('views/rootLayoutView');
-  var MenuItemView = require('views/menuItemView');
-  var Routers = require('routers/routers');
+function (Marionette, NavController, RootLayoutView, MenuItemView, Routers, hello) {
+  'use strict';
 
   var App = new Marionette.Application();
 
@@ -23,15 +27,8 @@ define(function (require) {
       controller: new NavController(options)
     });
 
-    // load modules
-    require(['#hello/index'], function (hello) {
-
-      hello(options).start();
-    });
-    // require(['#hello/app'], function (hello) {
-    //
-    //   hello(options).start();
-    // });
+    // start modules
+    hello(options).start();
   });
 
   return App;
