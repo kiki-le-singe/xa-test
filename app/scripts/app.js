@@ -1,13 +1,14 @@
 define([
   'marionette',
+  'underscore',
   'controllers/nav',
   'views/rootLayoutView',
   'views/menuItemView',
   'routers/routers',
-  '#hello/index'
+  'modules'
 ],
 
-function (Marionette, NavController, RootLayoutView, MenuItemView, Routers, Hello) {
+function (Marionette, _, NavController, RootLayoutView, MenuItemView, Routers, modules) {
   'use strict';
 
   var app = new Marionette.Application();
@@ -27,7 +28,7 @@ function (Marionette, NavController, RootLayoutView, MenuItemView, Routers, Hell
     });
 
     // start modules
-    this.hello = new Hello(options);
+    modules(options);
   });
 
   return app;
