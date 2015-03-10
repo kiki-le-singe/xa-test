@@ -1,5 +1,8 @@
 'use strict';
 
+// For a full list of possible options see:
+// https://github.com/jrburke/r.js/blob/master/build/example.build.js
+
 module.exports = {
   compile: {
     options: {
@@ -13,6 +16,7 @@ module.exports = {
         requireLib: '../bower_components/requirejs/require',
         templates: '../../<%= yeoman.tmp %>/scripts/templates'
       },
+      findNestedDependencies: true,
       include: 'requireLib',
       wrapShim: true
     }
