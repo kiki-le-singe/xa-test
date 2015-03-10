@@ -4,8 +4,8 @@ module.exports = {
   compile: {
     options: {
       processName: function (filePath) {
-        var matches = filePath.match(new RegExp('app/scripts/(modules/templates|templates)/(.*).hbs'));
-        return matches ? matches[2] : filePath;
+        var matches = filePath.match(new RegExp('app/scripts/(modules/(\\w+)/templates|templates)/(.*).hbs'));
+        return matches ? matches[3] : filePath;
       },
       namespace: 'templates',
       amd: true
