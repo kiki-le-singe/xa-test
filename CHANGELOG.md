@@ -1,3 +1,17 @@
+<a name="1.1.0"></a>
+## 1.1.0 (2015-03-11)
+
+
+#### Bug Fixes
+
+* **bower:** return to old handlebars version, because partial templates doesn't work with ha ([190acd20](https://github.com/kiki-le-singe/marionette-boilerplate/commit/190acd2031bbd8468e40bbdabf1ced9f5582b9fe))
+
+
+#### Features
+
+* **_message:** add exemple for partial templates ([02407617](https://github.com/kiki-le-singe/marionette-boilerplate/commit/02407617814f66430c19326c966636be5bdc9581))
+
+
 <a name="1.0.0"></a>
 ## 1.0.0 (2015-03-11)
 
@@ -34,4 +48,3 @@
 #### Features
 
 * **vent:** uses backbone.radio instead of backbone.wreqr ([61bb18e4](https://github.com/kiki-le-singe/marionette-boilerplate/commit/61bb18e4a619930932b98deb9d830162a27e9234))
-
