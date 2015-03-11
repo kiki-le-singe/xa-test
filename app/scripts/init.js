@@ -37,8 +37,6 @@ require.config({
     /* requirejs-plugins */
     json: '../bower_components/requirejs-plugins/src/json',
 
-    /* handlebars from the require handlerbars plugin below */
-    handlebars: '../bower_components/handlebars/handlebars',
-    hbs: '../bower_components/requirejs-hbs/hbs'
+    handlebars: '../bower_components/handlebars/handlebars.runtime'
   }
 });
