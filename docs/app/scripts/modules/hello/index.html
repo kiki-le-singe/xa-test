@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en"><head><title>app/scripts/modules/hello/index</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../../"><meta name="groc-document-path" content="app/scripts/modules/hello/index"><meta name="groc-project-path" content="app/scripts/modules/hello/index.js"><link rel="stylesheet" type="text/css" media="all" href="../../../../assets/style.css"><script type="text/javascript" src="../../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">app/scripts/modules/hello/index.js</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper">define([
+  <span class="hljs-string">'marionette'</span>,
+  <span class="hljs-string">'#hello/controllers/nav'</span>,
+  <span class="hljs-string">'#hello/routers/routers'</span>,
+  <span class="hljs-string">'vent'</span>
+],
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Marionette, NavController, Routers, vent)</span> {</span>
+<span class="hljs-pi">  'use strict'</span>;
+
+  <span class="hljs-keyword">return</span> Marionette.Object.extend({
+
+    initialize: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(options)</span> {</span>
+      options = options || {};
+
+      <span class="hljs-keyword">this</span>.routers = <span class="hljs-keyword">new</span> Routers({
+        controller: <span class="hljs-keyword">new</span> NavController(options)
+      });
+
+      console.log(<span class="hljs-string">'initialize: helloIndexObject'</span>);
+      vent.trigger(<span class="hljs-string">'module:hello:bootstrapped'</span>);
+    }
+  });
+});</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>define([
+  &#39;marionette&#39;,
+  &#39;#hello/app&#39;,
+  &#39;vent&#39;
+],
+function (Marionette, app, vent) {
+  &#39;use strict&#39;;
+  return Marionette.Object.extend({
+    initialize: function (options) {
+      options = options || {};
+      this.app = app(options);
+      this.app.start();
+      console.log(&#39;initialize: helloIndexObject&#39;);
+      vent.trigger(&#39;module:hello:bootstrapped&#39;);
+    }
+  });</p></div></div><div class="code"><div class="wrapper"><span class="hljs-comment">// );</span></div></div></div></div></body></html>

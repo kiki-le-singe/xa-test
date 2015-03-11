@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><title>app/scripts/models/librariesCollection</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../"><meta name="groc-document-path" content="app/scripts/models/librariesCollection"><meta name="groc-project-path" content="app/scripts/models/librariesCollection.js"><link rel="stylesheet" type="text/css" media="all" href="../../../assets/style.css"><script type="text/javascript" src="../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">app/scripts/models/librariesCollection.js</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper">define([
+  <span class="hljs-string">'backbone'</span>,
+  <span class="hljs-string">'json!config/api.json'</span>,
+  <span class="hljs-string">'models/libraryModel'</span>
+],
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Backbone, api, LibraryModel)</span> {</span>
+<span class="hljs-pi">  'use strict'</span>;
+
+  <span class="hljs-keyword">return</span> Backbone.Collection.extend({
+    model: LibraryModel,
+    url: api.libraries,
+    initialize: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+      console.log(<span class="hljs-string">'initialize: librariesCollection'</span>);
+    }
+  });
+});</div></div></div></div></body></html>
