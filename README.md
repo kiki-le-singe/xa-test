@@ -58,6 +58,11 @@ Generates a html doc of your documented code in `/docs` and open it in your brow
 
 Generate complexity analysis reports in `/reports` with [plato](https://github.com/es-analysis/plato).
 
+* `$ grunt changelog`
+
+Generate a markdown changelog from git commit data.
+[grunt-conventional-changelog](https://www.npmjs.com/package/grunt-conventional-changelog).
+
 ## Included JavaScript libraries
 
  * [Backbone.js](http://backbonejs.org/)
