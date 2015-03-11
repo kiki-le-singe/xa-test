@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+## 1.2.0 (2015-03-11)
+
+
+#### Features
+
+* **handlebars:** implements processPartialName option ([4c187315](https://github.com/kiki-le-singe/marionette-boilerplate/commit/4c1873151d962af7fbf8831660a90812d37f90a6))
+* **hello.templates:** update hello template and add _content partial template ([242934b9](https://github.com/kiki-le-singe/marionette-boilerplate/commit/242934b98b3c474ef5453d86feb5f939961742c2))
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2015-03-11)
 
