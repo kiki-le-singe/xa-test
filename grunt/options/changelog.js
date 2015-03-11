@@ -2,6 +2,6 @@
 
 module.exports = {
   options: {
-    // editor: 'atom'
+    editor: 'atom'
   }
 };
