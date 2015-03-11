@@ -8,6 +8,7 @@ module.exports = function (grunt, options) {
     test: ['mocha', 'lint'],
     serve: [
       'compass:dev',
+      'handlebars',
       'express:dev',
       'open:server',
       'lint',
