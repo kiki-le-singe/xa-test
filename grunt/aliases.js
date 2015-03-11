@@ -2,9 +2,6 @@
 
 module.exports = function (grunt, options) {
   return {
-    createDefaultTemplate: function () {
-      grunt.file.write('.tmp/scripts/templates.js', 'this.templates = this.templates || {};');
-    },
     test: ['mocha', 'lint'],
     serve: [
       'compass:dev',
@@ -16,7 +13,6 @@ module.exports = function (grunt, options) {
     ],
     lint: ['jshint', 'jscs'],
     dist: [
-      'createDefaultTemplate', // is it helpful ?
       'clean:dist',
       'compass:dist',
       'cssmin:dist',
