@@ -1,6 +1,6 @@
 define([
   'marionette',
-  '#hello/templates'
+  'templates'
 ],
 
 function (Marionette, templates) {
