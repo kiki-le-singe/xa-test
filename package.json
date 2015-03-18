@@ -8,11 +8,17 @@
     "type": "git",
     "url": "https://github.com/kiki-le-singe/marionette-boilerplate.git"
   },
+  "homepage": "https://github.com/kiki-le-singe/marionette-boilerplate",
+  "bugs": "https://github.com/kiki-le-singe/marionette-boilerplate/issues",
   "keywords": [
     "marionette",
-    "boilerplate"
+    "boilerplate",
+    "backbone",
+    "lodash",
+    "handlebars",
+    "express"
   ],
-  "description": "My Boilerplate",
+  "description": "This is a boilerplate for starting a project with RequireJS, Marionette, Lodash, Handlebars... It's possible to use either Grunt or Gulp as task runner. Express is used for serve the application.",
   "engines": {
     "node": ">= 0.10.23"
   },
