@@ -2,7 +2,7 @@
 
 module.exports = function (grunt, options) {
   return {
-    test: ['mocha', 'lint'],
+    test: ['handlebars', 'mocha', 'lint'],
     serve: [
       'compass:dev',
       'handlebars',
