@@ -1,5 +1,7 @@
 # Marionette Boilerplate
 
+[![Build Status](https://travis-ci.org/kiki-le-singe/marionette-boilerplate.svg?branch=master)](https://travis-ci.org/kiki-le-singe/marionette-boilerplate)
+
 ## Introduction
 
 > This project is first to train with tools like [GruntJS](http://gruntjs.com/), [Yeoman](http://yeoman.io/), [Backbone.js](http://backbonejs.org/), [Marionette.js](http://marionettejs.com/)... And then I used it like Boilerplate.
