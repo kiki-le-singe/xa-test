@@ -1,5 +1,6 @@
 require.config({
   baseUrl: '../app/scripts',
+
   paths: {
     jquery: '../bower_components/jquery/dist/jquery',
     underscore: '../bower_components/lodash/lodash',
@@ -9,9 +10,8 @@ require.config({
     'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
     'backbone.radio': '../bower_components/backbone.radio/build/backbone.radio',
     handlebars: '../bower_components/handlebars/handlebars',
-    hbs: '../bower_components/requirejs-hbs/hbs',
     text: '../bower_components/requirejs-text/text',
-    tmpl: '../templates',
+    templates: '../../.tmp/scripts/templates',
     json: '../bower_components/requirejs-plugins/src/json',
     tests: '../../tests',
     chai: '../bower_components/chai/chai',
@@ -19,16 +19,13 @@ require.config({
     sinonjs: '../bower_components/sinonjs/sinon',
     'sinon-chai': '../bower_components/sinon-chai/lib/sinon-chai'
   },
-  deps: ['jquery', 'underscore'],
+
   shim: {
-    jquery: {
-      exports: '$'
-    },
-    underscore: {
-      exports: '_'
-    },
     backbone: {
-      deps: ['jquery', 'underscore']
+      deps: ['underscore', 'jquery']
+    },
+    marionette: {
+      deps: ['backbone']
     },
     chai: {
       deps: ['jquery'],
