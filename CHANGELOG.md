@@ -1,3 +1,13 @@
+<a name="1.4.0"></a>
+## 1.4.0 (2015-03-19)
+
+
+#### Features
+
+* **package:** uses grunt-contrib-sass instead of grunt-contrib-compass ([ba6fadf8](https://github.com/kiki-le-singe/marionette-boilerplate/commit/ba6fadf8a5b3b1f3c57e2e20501a98a76cc90da2))
+* **sass:** implements sass task ([e797a9a3](https://github.com/kiki-le-singe/marionette-boilerplate/commit/e797a9a3d13332a321cba40f28a164b1c9d3da7b))
+
+
 <a name="1.2.0"></a>
 ## 1.2.0 (2015-03-11)
 
