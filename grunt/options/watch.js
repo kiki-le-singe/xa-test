@@ -2,7 +2,7 @@
 
 module.exports = {
   sass: {
-    files: ['<%= yeoman.app %>/styles/**/*.scss'],
+    files: ['<%= yeoman.app %>/styles/scss/**/*.scss'],
     tasks: ['sass:dev']
   },
   handlebars: {
