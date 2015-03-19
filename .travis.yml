@@ -3,6 +3,8 @@ node_js:
   - "0.12"
 before_install:
   - sudo apt-get update
+before_script:
+  - cd tests
 install:
   - npm install -g grunt-cli
   - npm install -g bower
