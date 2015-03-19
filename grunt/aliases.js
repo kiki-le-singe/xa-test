@@ -4,7 +4,7 @@ module.exports = function (grunt, options) {
   return {
     test: ['handlebars', 'mocha', 'lint'],
     serve: [
-      'compass:dev',
+      'sass:dev',
       'handlebars',
       'express:dev',
       'open:server',
@@ -14,7 +14,7 @@ module.exports = function (grunt, options) {
     lint: ['jshint', 'jscs'],
     dist: [
       'clean:dist',
-      'compass:dist',
+      'sass:dist',
       'cssmin:dist',
       'handlebars',
       'requirejs',
