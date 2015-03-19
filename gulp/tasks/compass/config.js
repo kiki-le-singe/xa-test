@@ -1,6 +1,6 @@
 'use strict';
 
-var sassDir = 'app/styles/sass';
+var sassDir = 'app/styles/scss';
 
 module.exports = {
   sass: {
