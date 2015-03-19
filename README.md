@@ -78,7 +78,6 @@ Generate a markdown changelog from git commit data.
  * [Handlebars](http://handlebarsjs.com/)
  * [Modernizr](http://modernizr.com/)
 
-
  > Why to use Backbone.wreqr and Backbone.radio? Marionette require Backbone.wreqr for internal use only and I use Backbone.radio instead of Backbone.wreqr in my boilerplate but it's not mandatory.
 
 ## API
