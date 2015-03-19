@@ -71,18 +71,14 @@ Generate a markdown changelog from git commit data.
  * [Marionette.js](http://marionettejs.com/)
  * [Backbone.babysitter](https://github.com/marionettejs/backbone.babysitter)
  * [Backbone.wreqr](https://github.com/marionettejs/backbone.wreqr)
-
- > Why? Marionette require it for internal use only.
-
  * [Backbone.radio](https://github.com/marionettejs/backbone.radio)
-
- > Why? I use it instead of Backbone.wreqr in my boilerplate but it's not mandatory.
- 
  * [Require.js](http://requirejs.org/)
  * [jQuery 2](http://jquery.com/)
  * [Lo-Dash V3](http://lodash.com/)
  * [Handlebars](http://handlebarsjs.com/)
  * [Modernizr](http://modernizr.com/)
+
+ > Why to use Backbone.wreqr and Backbone.radio? Marionette require Backbone.wreqr for internal use only and I use Backbone.radio instead of Backbone.wreqr in my boilerplate but it's not mandatory.
 
 ## API
 
