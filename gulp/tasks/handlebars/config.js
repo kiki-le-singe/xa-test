@@ -2,7 +2,11 @@
 
 module.exports = {
   handlebars: {
-    src: 'app/scripts/**/*.hbs',
-    dest: '.tmp/scripts/'
+    src: {
+      templates: 'app/scripts/**/*.hbs',
+      partials: 'app/scripts/**/_*.hbs'
+    },
+    dest: 'app/scripts/'
+    // dest: '.tmp/scripts/'
   }
 };
