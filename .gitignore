@@ -2,8 +2,9 @@ node_modules
 temp
 dist
 .sass-cache
-app/bower_components
 .tmp
+app/bower_components
 app/styles/css
+app/scripts/templates.js
 marionette-boilerplate-*.tgz
 reports
