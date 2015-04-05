@@ -14,7 +14,8 @@ module.exports = {
       optimize: 'uglify2',
       paths: {
         requireLib: '../bower_components/requirejs/require',
-        templates: '../../<%= yeoman.tmp %>/scripts/templates'
+        templates: 'templates'
+        // templates: '../../<%= yeoman.tmp %>/scripts/templates'
       },
       findNestedDependencies: true,
       include: 'requireLib',
