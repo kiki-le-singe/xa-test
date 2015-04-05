@@ -20,7 +20,7 @@ module.exports = {
       }
     },
     files: {
-      '<%= yeoman.tmp %>/scripts/templates.js': ['<%= yeoman.app %>/scripts/**/*.hbs']
+      '<%= yeoman.app %>/scripts/templates.js': ['<%= yeoman.app %>/scripts/**/*.hbs']
     }
   }
 };
