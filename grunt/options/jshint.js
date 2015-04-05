@@ -3,6 +3,7 @@
 // linting
 module.exports = {
   options: {
+    ignores: ['<%= yeoman.app %>/scripts/templates.js'],
     jshintrc: '.jshintrc',
     reporter: require('jshint-stylish')
   },
