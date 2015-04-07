@@ -6,8 +6,9 @@
 var gulp = require('gulp');
 var gls = require('gulp-live-server');
 var gutil = require('gulp-util');
+var config = require('./config').liveServer;
 
 gulp.task('server', function () {
-  var server = gls(['server/app.js', gutil.env.stub]);
+  var server = gls([config.file, gutil.env.stub]);
   server.start();
 });
