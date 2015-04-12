@@ -60,3 +60,15 @@ gulp.task('handlebars:dev', function () {
     // Write the output into the .tmp/scripts folder
     .pipe(gulp.dest(config.dest));
 });
+*/
+
+// Temporary use of gulp-grunt plugin.
+// https://www.npmjs.com/package/gulp-grunt
+
+var gulp = require('gulp');
+require('gulp-grunt')(gulp, {
+  base: require('path').join(__dirname, '../../..'),
+  verbose: true
+}); // add all the gruntfile tasks to gulp
+
+gulp.task('handlebars', ['grunt-hbs']);
