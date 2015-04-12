@@ -8,6 +8,11 @@
 // Compile and register partials:
 // https://github.com/lazd/gulp-handlebars/tree/master/examples/partials
 
+// Problems:
+// http://stackoverflow.com/questions/28708934/handlebars-partial-printing-object-object-when-rendered
+// https://github.com/lazd/gulp-handlebars/issues/54
+
+/*
 var gulp = require('gulp');
 var handlebars = require('gulp-handlebars');
 var wrap = require('gulp-wrap');
@@ -39,6 +44,13 @@ gulp.task('handlebars:dev', function () {
     .pipe(declare({
       namespace: 'templates',
       noRedeclare: true, // Avoid duplicate declarations
+      processName: function (filePath) {
+        var matches = filePath.match(new RegExp('(modules/(\\w+)/templates|templates)/((.*)\/?)(.*).js'));
+        if (!matches) {
+          return filePath;
+        }
+        return (matches[2] ? matches[2] + '/' : '') + (matches[3] ? matches[3] : '');
+      }
     }));
 
   // Output both the partials and the templates as build/js/templates.js
