@@ -2,6 +2,7 @@
 
 // https://github.com/BrowserSync/gulp-browser-sync
 // http://www.browsersync.io/docs/gulp/
+// https://github.com/gulpjs/gulp/blob/master/docs/recipes/server-with-livereload-and-css-injection.md
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
