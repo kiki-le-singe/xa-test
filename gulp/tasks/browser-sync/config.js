@@ -2,7 +2,8 @@
 
 module.exports = {
   browserSync: {
-    options: {},
+    templates: 'app/scripts/templates.js',
+    css: 'app/styles/css/**/*.css',
     proxy: 'http://localhost:9000'
   }
 };
