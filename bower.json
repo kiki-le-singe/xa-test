@@ -20,7 +20,7 @@
     "requirejs-text": "~2.0.14",
     "modernizr": "~2.8.3",
     "requirejs-plugins": "~1.0.3",
-    "handlebars": "^2.0.0"
+    "handlebars": "~3.0.2"
   },
   "devDependencies": {
     "mocha": "~2.1.0",
