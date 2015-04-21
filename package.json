@@ -59,6 +59,7 @@
     "gulp-declare": "^0.3.0",
     "gulp-grunt": "^0.5.2",
     "gulp-handlebars": "^4.0.0",
+    "gulp-jscs": "^1.5.2",
     "gulp-jshint": "^1.10.0",
     "gulp-live-server": "0.0.8",
     "gulp-load-plugins": "^0.8.1",
