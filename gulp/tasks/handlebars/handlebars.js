@@ -8,11 +8,14 @@
 // Compile and register partials:
 // https://github.com/lazd/gulp-handlebars/tree/master/examples/partials
 
-// Problems:
+// Problems encountered:
 // http://stackoverflow.com/questions/28708934/handlebars-partial-printing-object-object-when-rendered
 // https://github.com/lazd/gulp-handlebars/issues/54
 
-/*
+// Fix: Temporary use of gulp-grunt plugin - https://www.npmjs.com/package/gulp-grunt
+// var gulp = require('gulp');
+// gulp.task('handlebars', ['grunt-hbs']);
+
 var gulp = require('gulp');
 var handlebars = require('gulp-handlebars');
 var wrap = require('gulp-wrap');
@@ -57,12 +60,5 @@ gulp.task('handlebars:dev', function () {
   return merge(partials, templates)
     .pipe(concat('templates.js'))
     .pipe(wrap('define(["handlebars"], function(Handlebars) {<%= contents %>return this["templates"];});'))
-    // Write the output into the .tmp/scripts folder
     .pipe(gulp.dest(config.dest));
 });
-*/
-
-// Temporary use of gulp-grunt plugin.
-// https://www.npmjs.com/package/gulp-grunt
-var gulp = require('gulp');
-gulp.task('handlebars', ['grunt-hbs']);
