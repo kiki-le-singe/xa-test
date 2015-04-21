@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 
+gulp.task('default', ['serve']);
+
 gulp.task('serve', [
   'sass:dev',
   'handlebars:dev',

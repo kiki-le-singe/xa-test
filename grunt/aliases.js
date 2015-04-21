@@ -2,6 +2,7 @@
 
 module.exports = function (grunt, options) {
   return {
+    default: ['serve'],
     test: ['handlebars', 'mocha', 'lint'],
     serve: [
       'sass:dev',
