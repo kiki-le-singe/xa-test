@@ -13,6 +13,12 @@
 // https://github.com/lazd/gulp-handlebars/issues/54
 
 // Fix: Temporary use of gulp-grunt plugin - https://www.npmjs.com/package/gulp-grunt
+// Temporary use of gulp-grunt plugin.
+// https://www.npmjs.com/package/gulp-grunt
+// require('gulp-grunt')(gulp, {
+//  base: require('path').join(__dirname, '../..'),
+//  verbose: true
+// }); // add all the gruntfile tasks to gulp
 // var gulp = require('gulp');
 // gulp.task('handlebars', ['grunt-hbs']);
 
