@@ -17,3 +17,14 @@ gulp.task('lint', [
   'jshint',
   'jscs'
 ]);
+
+gulp.task('dist', [
+  'sass:dist',
+  'handlebars:dev',
+  'requirejs',
+  'processhtml'
+]);
+
+gulp.task('build', [
+  'dist'
+]);
