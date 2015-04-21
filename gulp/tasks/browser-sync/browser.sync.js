@@ -9,7 +9,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var config = require('./config').browserSync;
 
-gulp.task('serve', function () {
+gulp.task('open:server', function () {
   browserSync({
     proxy: config.proxy
   });
