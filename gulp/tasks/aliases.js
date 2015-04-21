@@ -7,5 +7,11 @@ gulp.task('serve', [
   'handlebars:dev',
   'server',
   'open:server',
+  'lint',
   'watch'
+]);
+
+gulp.task('lint', [
+  'jshint',
+  'jscs'
 ]);
