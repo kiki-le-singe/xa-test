@@ -19,6 +19,7 @@ gulp.task('lint', [
 ]);
 
 gulp.task('dist', [
+  'clean:dist',
   'sass:dist',
   'handlebars:dev',
   'requirejs',
@@ -26,5 +27,8 @@ gulp.task('dist', [
 ]);
 
 gulp.task('build', [
-  'dist'
+  'dist',
+  'clean:release',
+  // 'compress',
+  'clean:dist'
 ]);
