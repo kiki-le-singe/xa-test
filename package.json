@@ -74,6 +74,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "gulp-wrap": "^0.11.0",
+    "gulp-zip": "^3.0.2",
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.1",
     "load-grunt-config": "^0.16.0",
