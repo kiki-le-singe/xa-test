@@ -1,3 +1,8 @@
+// [gulpjs](https://github.com/gulpjs/gulp)
+// [gulpjs-docs](https://github.com/gulpjs/gulp/blob/master/docs/README.md)
+// [web-starter-kit](https://github.com/google/web-starter-kit/blob/master/gulpfile.js)
+// [building-with-gulp](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/)
+
 // var gulp = require('gulp');
 
 require('gulp-load-plugins')();
