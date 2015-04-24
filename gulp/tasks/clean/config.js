@@ -2,7 +2,7 @@
 
 module.exports = {
   clean: {
-    release: ['marionette-boilerplate-*.tgz'],
+    release: ['marionette-boilerplate-*.zip'],
     dist: ['.tmp', 'dist']
   }
 };
