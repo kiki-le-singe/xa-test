@@ -7,9 +7,3 @@ require('gulp-load-plugins')();
 var requireDir = require('require-dir');
 
 requireDir('./gulp/tasks', {recurse: true});
-
-/*
-gulp.task('default', function () {
-  // place code for your default task here
-  console.log('coucou');
-});*/
