@@ -12,13 +12,13 @@ var minifyCSS = require('gulp-minify-css');
 var config = require('./config').sass;
 
 gulp.task('sass:dev', function () {
-  gulp.src(config.mainSassFile)
+  return gulp.src(config.mainSassFile)
     .pipe(sass())
     .pipe(gulp.dest(config.cssDir));
 });
 
 gulp.task('sass:dist', function () {
-  gulp.src(config.mainSassFile)
+  return gulp.src(config.mainSassFile)
     /*.pipe(sass({
       outputStyle: 'compressed'
     }))*/
