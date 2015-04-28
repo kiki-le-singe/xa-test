@@ -1,1 +1,8 @@
+@import 'config';
+@import 'font-face';
 @import 'timeline';
+
+body {
+  background-color: $black;
+  color: $white;
+}
