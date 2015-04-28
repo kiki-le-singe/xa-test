@@ -17,7 +17,7 @@ var applicationRoot = __dirname,
     stubArg = ('true' === args[2]);
 
 // parses request body and populates request.body
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended: true}));
 // where to serve static content
 app.use(express.static(path.join(applicationRoot, '../dist')));
 // app.use(express.static(path.join(applicationRoot, '../app')));
