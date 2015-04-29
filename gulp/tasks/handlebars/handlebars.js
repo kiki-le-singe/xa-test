@@ -30,7 +30,6 @@ var merge = require('merge-stream');
 
 gulp.task('handlebars', function () {
   var partials = gulp.src(config.src.partials)
-    .pipe($.cached('handlebarsPartials'))
     .pipe($.handlebars())
     .pipe($.wrap('Handlebars.registerPartial("<%= processPartialName(file.relative) %>", Handlebars.template(<%= contents %>));', {}, {
       imports: {
@@ -46,7 +45,6 @@ gulp.task('handlebars', function () {
 
   // Load templates from the templates/ folder relative to where gulp was executed
   var templates = gulp.src(config.src.templates)
-    .pipe($.cached('handlebarsTemplates'))
     // Compile each Handlebars template source file to a template function
     .pipe($.handlebars())
     .pipe($.wrap('Handlebars.template(<%= contents %>)'))
