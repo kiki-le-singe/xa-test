@@ -23,7 +23,7 @@ gulp.task('lint', [
 
 gulp.task('dist', function (cb) {
   runSequence('clean:dist',
-    ['sass:dist', 'handlebars:dev', 'processhtml'],
+    ['sass:dist', 'handlebars', 'processhtml', 'imagemin'],
     'requirejs',
     cb);
 });
