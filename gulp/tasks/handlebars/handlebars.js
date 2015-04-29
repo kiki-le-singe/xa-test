@@ -30,7 +30,7 @@ var concat = require('gulp-concat');
 var config = require('./config').handlebars;
 var merge = require('merge-stream');
 
-gulp.task('handlebars:dev', function () {
+gulp.task('handlebars', function () {
   var partials = gulp.src(config.src.partials)
     .pipe(handlebars())
     .pipe(wrap('Handlebars.registerPartial("<%= processPartialName(file.relative) %>", Handlebars.template(<%= contents %>));', {}, {

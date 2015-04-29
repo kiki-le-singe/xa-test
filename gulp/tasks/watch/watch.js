@@ -10,5 +10,5 @@ gulp.task('css-watch', function () {
 });
 
 gulp.task('hbs-watch', function () {
-  gulp.watch([config.hbs, config.hbsModule], ['handlebars:dev']);
+  gulp.watch([config.hbs, config.hbsModule], ['handlebars']);
 });
