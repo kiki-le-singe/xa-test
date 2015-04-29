@@ -19,8 +19,7 @@ var applicationRoot = __dirname,
 // parses request body and populates request.body
 app.use(bodyParser());
 // where to serve static content
-app.use(express.static(path.join(applicationRoot, '../dist')));
-// app.use(express.static(path.join(applicationRoot, '../app')));
+app.use(express.static(path.join(applicationRoot, '../app')));
 
 /*******************
  ROUTES FOR OUR API
