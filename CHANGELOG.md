@@ -1,3 +1,46 @@
+<a name"1.7.0"></a>
+## 1.7.0 (2015-04-29)
+
+
+#### Bug Fixes
+
+* **app:**
+  * serve the good folder ([f6e9ca19](https://github.com/kiki-le-singe/marionette-boilerplate/commit/f6e9ca19))
+  * change the folder to serve ([01352efe](https://github.com/kiki-le-singe/marionette-boilerplate/commit/01352efe))
+* **config:**
+  * exclude partial templates for handlebars templates ([1e9c12fc](https://github.com/kiki-le-singe/marionette-boilerplate/commit/1e9c12fc))
+  * update sass config ([73c65191](https://github.com/kiki-le-singe/marionette-boilerplate/commit/73c65191))
+* **handlebars:**
+  * remove cached plugin for fix problems ([fdb9d723](https://github.com/kiki-le-singe/marionette-boilerplate/commit/fdb9d723))
+  * Temporary use of gulp-grunt plugin ([b6763a78](https://github.com/kiki-le-singe/marionette-boilerplate/commit/b6763a78))
+  * update handlebars task for allows subdirectories ([970ce042](https://github.com/kiki-le-singe/marionette-boilerplate/commit/970ce042))
+* **watch:** fix conflict ([431f81cd](https://github.com/kiki-le-singe/marionette-boilerplate/commit/431f81cd))
+
+
+#### Features
+
+* **aliases:** add dist and build tasks ([2fa207a8](https://github.com/kiki-le-singe/marionette-boilerplate/commit/2fa207a8))
+* **bootstrap:** uses bootstrap ([21047eff](https://github.com/kiki-le-singe/marionette-boilerplate/commit/21047eff))
+* **browser.sync:** reload browser when some files changed ([b5a533b8](https://github.com/kiki-le-singe/marionette-boilerplate/commit/b5a533b8))
+* **browsersync:** implements browsersync plugin ([26f6e42a](https://github.com/kiki-le-singe/marionette-boilerplate/commit/26f6e42a))
+* **clean:** implements clean task ([f7cdc670](https://github.com/kiki-le-singe/marionette-boilerplate/commit/f7cdc670))
+* **compass:** add compass task ([43379df3](https://github.com/kiki-le-singe/marionette-boilerplate/commit/43379df3))
+* **gulp:** test gulp ([e50d1fba](https://github.com/kiki-le-singe/marionette-boilerplate/commit/e50d1fba))
+* **hello:** add partial file for example ([021c6466](https://github.com/kiki-le-singe/marionette-boilerplate/commit/021c6466))
+* **imagemin:**
+  * implements imagemin task ([ce6754a0](https://github.com/kiki-le-singe/marionette-boilerplate/commit/ce6754a0))
+  * implements imagemin task ([8f2b073c](https://github.com/kiki-le-singe/marionette-boilerplate/commit/8f2b073c))
+* **kiki:**
+  * add kiki pictures ([f7a300ac](https://github.com/kiki-le-singe/marionette-boilerplate/commit/f7a300ac))
+  * add kiki pictures ([6c3740dd](https://github.com/kiki-le-singe/marionette-boilerplate/commit/6c3740dd))
+* **processhtml:** implements processhtml and htmlmin tasks ([a45c1bfd](https://github.com/kiki-le-singe/marionette-boilerplate/commit/a45c1bfd))
+* **requirejs:** implements requirejs task ([166a1e4b](https://github.com/kiki-le-singe/marionette-boilerplate/commit/166a1e4b))
+* **runSequence:** implements run-sequence plugin ([27451194](https://github.com/kiki-le-singe/marionette-boilerplate/commit/27451194))
+* **scss.config:** add scss config ([bd283de9](https://github.com/kiki-le-singe/marionette-boilerplate/commit/bd283de9))
+* **watch:** Implements a watching task ([e0d5224b](https://github.com/kiki-le-singe/marionette-boilerplate/commit/e0d5224b))
+* **zip:** implements gulp-zip plugin ([5c3f9a9e](https://github.com/kiki-le-singe/marionette-boilerplate/commit/5c3f9a9e))
+
+
 <a name="1.4.0"></a>
 ## 1.4.0 (2015-03-19)
 
