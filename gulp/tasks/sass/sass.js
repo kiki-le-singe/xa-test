@@ -4,26 +4,27 @@
   // options: https://github.com/sass/node-sass
 // https://www.npmjs.com/package/gulp-rename
 // https://www.npmjs.com/package/gulp-minify-css
+// https://github.com/wearefractal/gulp-cached
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var rename = require('gulp-rename');
-var minifyCSS = require('gulp-minify-css');
+var $ = require('gulp-load-plugins')();
 var config = require('./config').sass;
 
 gulp.task('sass:dev', function () {
   return gulp.src(config.mainSassFile)
-    .pipe(sass())
+    .pipe($.cached('sassDev'))
+    .pipe($.sass())
     .pipe(gulp.dest(config.cssDir));
 });
 
 gulp.task('sass:dist', function () {
   return gulp.src(config.mainSassFile)
+    .pipe($.cached('sassDist'))
     /*.pipe(sass({
       outputStyle: 'compressed'
     }))*/
-    .pipe(sass())
-    .pipe(minifyCSS())
-    .pipe(rename('main.min.css'))
+    .pipe($.sass())
+    .pipe($.minifyCss())
+    .pipe($.rename('main.min.css'))
     .pipe(gulp.dest(config.dist.dest));
 });
