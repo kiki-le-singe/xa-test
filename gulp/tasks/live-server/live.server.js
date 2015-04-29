@@ -4,11 +4,10 @@
 // https://www.npmjs.com/package/gulp-util
 
 var gulp = require('gulp');
-var gls = require('gulp-live-server');
-var gutil = require('gulp-util');
+var $ = require('gulp-load-plugins')();
 var config = require('./config').liveServer;
 
 gulp.task('server', function () {
-  var server = gls([config.file, gutil.env.stub]);
+  var server = $.liveServer([config.file, $.util.env.stub]);
   server.start();
 });
