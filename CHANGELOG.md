@@ -1,3 +1,12 @@
+<a name"1.7.1"></a>
+### 1.7.1 (2015-04-30)
+
+
+#### Bug Fixes
+
+* **sass:** fix cache problemes ([f8573cc8](https://github.com/kiki-le-singe/marionette-boilerplate/commit/f8573cc8))
+
+
 <a name"1.7.0"></a>
 ## 1.7.0 (2015-04-29)
 
