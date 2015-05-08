@@ -1,15 +1,15 @@
 define([
-  '#hello/index'
+  '#books/index'
 ],
 
-function (Hello) {
+function (Books) {
   'use strict';
 
   return function (options) {
     options = options || {};
 
     var modules = [
-      new Hello(options)
+      new Books(options)
     ];
 
     return modules;
