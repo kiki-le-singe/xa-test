@@ -1,0 +1,21 @@
+@media only screen and (max-width: 736px) {
+  .book {
+    .card {
+      width: 290px;
+    }
+  }
+}
+
+@media (min-width: 600px) and (orientation: portrait) {
+  .book {
+    .card {
+      width: 420px;
+    }
+    .card-bg-gradient {
+      bottom: 12%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

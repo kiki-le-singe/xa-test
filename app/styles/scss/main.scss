@@ -1,8 +1,7 @@
-@import 'config';
+@import 'settings';
+@import '../../bower_components/foundation/scss/foundation';
 @import 'font-face';
-@import 'timeline';
+@import 'ui';
+@import 'media-queries';
 
-body {
-  background-color: $black;
-  color: $white;
-}
+// http://zurb.com/playground/foundation-icon-fonts-3
