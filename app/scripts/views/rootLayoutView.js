@@ -11,9 +11,9 @@ function (Marionette, templates) {
     template: templates['root-layout'],
 
     regions: {
-      header: '#header',
-      content: '#content',
-      footer: '#footer'
+      header: 'header',
+      content: '.content',
+      footer: 'footer'
     },
 
     initialize: function () {
