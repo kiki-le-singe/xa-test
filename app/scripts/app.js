@@ -2,9 +2,11 @@ define([
   'marionette',
   'underscore',
   'views/rootLayoutView',
+  'views/navItemView',
   'modules'
 ],
 
+function (Marionette, _, RootLayoutView, NavItemView, modules) {
   'use strict';
 
   var app = new Marionette.Application();
@@ -17,6 +19,7 @@ define([
     };
 
     rootLayoutView.render();
+    rootLayoutView.header.show(new NavItemView());
 
     // start modules
     modules(options);
