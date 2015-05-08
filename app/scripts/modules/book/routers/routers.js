@@ -7,8 +7,7 @@ function (Marionette) {
 
   var Router = Marionette.AppRouter.extend({
     appRoutes: {
-      libraries: 'libraries',
-      '': 'home'
+      'book/:id': 'book'
     }
   });
 

@@ -7,11 +7,14 @@ function (Backbone) {
 
   return Backbone.Model.extend({
     defaults: {
-      success: 'CONGRATS!'
+      isbn: '',
+      title: '',
+      price: 0,
+      cover: ''
     },
 
     initialize: function () {
-      console.log('initialize: helloWorldModel');
+      console.log('initialize: bookModel');
     }
   });
 });

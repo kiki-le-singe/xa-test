@@ -1,9 +1,9 @@
 define([
   'marionette',
-  '#hello/views/hello'
+  '#book/views/book'
 ],
 
-function (Marionette, HelloView) {
+function (Marionette, BookView) {
   'use strict';
 
   return Marionette.Controller.extend({
@@ -11,8 +11,8 @@ function (Marionette, HelloView) {
       this.contentRegion = this.getOption('contentRegion');
     },
 
-    hello: function () {
-      return this.contentRegion.show(new HelloView());
+    book: function (id) {
+      return this.contentRegion.show(new BookView());
     }
   });
 });

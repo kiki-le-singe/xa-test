@@ -1,7 +1,7 @@
 define([
   'marionette',
-  '#hello/controllers/nav',
-  '#hello/routers/routers'
+  '#book/controllers/nav',
+  '#book/routers/routers'
 ],
 
 function (Marionette, NavController, Routers) {
