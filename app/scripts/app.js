@@ -1,14 +1,10 @@
 define([
   'marionette',
   'underscore',
-  'controllers/nav',
   'views/rootLayoutView',
-  'views/menuItemView',
-  'routers/routers',
   'modules'
 ],
 
-function (Marionette, _, NavController, RootLayoutView, MenuItemView, Routers, modules) {
   'use strict';
 
   var app = new Marionette.Application();
@@ -21,11 +17,6 @@ function (Marionette, _, NavController, RootLayoutView, MenuItemView, Routers, m
     };
 
     rootLayoutView.render();
-    rootLayoutView.header.show(new MenuItemView());
-
-    this.routers = new Routers({
-      controller: new NavController(options)
-    });
 
     // start modules
     modules(options);
