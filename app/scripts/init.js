@@ -16,7 +16,8 @@ require.config({
 
   paths: {
     // modules
-    '#hello': 'modules/hello',
+    '#book': 'modules/book',
+    '#books': 'modules/books',
 
     jquery: '../bower_components/jquery/dist/jquery',
     underscore: '../bower_components/lodash/lodash',
