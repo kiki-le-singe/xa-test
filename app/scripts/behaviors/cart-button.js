@@ -11,7 +11,7 @@ function (Marionette, vent, templates) {
     defaults: {
       template: templates['ui/button/cart'],
       container: '.panel',
-      icon: '.fi-shopping-bag',
+      icon: '.fi-shopping-cart',
       activeClass: 'icon-on',
       animateClass: 'rubberBand'
     },
