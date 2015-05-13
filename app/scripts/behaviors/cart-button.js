@@ -38,7 +38,14 @@ function (Marionette, vent, templates) {
       var activeClass = this.getOption('activeClass');
       var $el = this.$(this.getOption('icon'));
 
-      $el.toggleClass(animateClass + ' ' + activeClass);
+      $el
+        .toggleClass(animateClass + ' ' + activeClass)
+        // Detect When CSS3 Animations and Transitions End:
+        // - http://stackoverflow.com/questions/9255279/callback-when-css3-transition-finishes?answertab=votes#tab-top
+        // - http://blog.teamtreehouse.com/using-jquery-to-detect-when-css3-animations-and-transitions-end
+        .one('webkitAnimationEnd', function () {
+          $(this).removeClass(animateClass);
+        });
 
       if ($el.hasClass(activeClass)) {
         vent.trigger('cart:add', this.model);
