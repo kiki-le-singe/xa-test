@@ -21,6 +21,7 @@
   .panel {
     background: $white;
     border: none;
+    position: relative;
   }
   .cover {
     max-height: 80%;
@@ -40,5 +41,21 @@
   }
   .price {
     color: $blue;
+    font-size: 22px;
+
+    i {
+      font-size: 28px;
+    }
+  }
+  .fi-shopping-bag {
+    bottom: 10px;
+    font-size: 42px;
+    left: 20px;
+    line-height: 1;
+    position: absolute;
+
+    &.icon-on {
+      color: $green;
+    }
   }
 }
