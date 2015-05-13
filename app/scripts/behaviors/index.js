@@ -2,6 +2,6 @@ define(function (require) {
   'use strict';
 
   return {
-    cartButton: require('behaviors/cart-button'),
+    cartButton: require('behaviors/cart-button')
   };
 });
