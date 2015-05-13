@@ -1,10 +1,10 @@
 define([
   'marionette',
   '#books/models/booksCollection',
-  '#books/views/books'
+  '#books/views/booksLayout'
 ],
 
-function (Marionette, BooksCollection, BooksView) {
+function (Marionette, BooksCollection, BooksLayoutView) {
   'use strict';
 
   return Marionette.Controller.extend({
@@ -21,9 +21,10 @@ function (Marionette, BooksCollection, BooksView) {
     },
 
     showBooksView: function () {
-      this.contentRegion.show(new BooksView({
+      var booksLayoutView = new BooksLayoutView({
         collection: this.collection
-      }));
+      });
+      this.contentRegion.show(booksLayoutView.render());
     }
   });
 });
