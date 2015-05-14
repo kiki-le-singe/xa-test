@@ -37,7 +37,10 @@ function (Marionette, vent, BooksCollection, DetailsCompositeView) {
     },
 
     showBag: function () {
-      debugger
+      var detailsCompositeView = new DetailsCompositeView({
+        collection: this.collection
+      });
+      this.contentRegion.show(detailsCompositeView);
     }
   });
 });
