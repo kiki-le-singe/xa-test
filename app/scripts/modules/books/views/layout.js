@@ -2,10 +2,10 @@ define([
   'marionette',
   'templates',
   '#books/views/books',
-  '#bag/views/layout'
+  '#bag/views/button'
 ],
 
-function (Marionette, templates, BooksView, BagLayoutView) {
+function (Marionette, templates, BooksView, BagButtonView) {
   'use strict';
 
   return Marionette.LayoutView.extend({
@@ -21,7 +21,7 @@ function (Marionette, templates, BooksView, BagLayoutView) {
         collection: this.collection
       }));
 
-      this.bag.show(new BagLayoutView());
+      this.bag.show(new BagButtonView());
     }
   });
 });
