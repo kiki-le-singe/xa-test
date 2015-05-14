@@ -11,10 +11,6 @@ function (Backbone) {
       title: '',
       price: 0,
       cover: ''
-    },
-
-    initialize: function () {
-      console.log('initialize: bookModel');
     }
   });
 });
