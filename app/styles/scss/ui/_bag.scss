@@ -1,13 +1,17 @@
-.bag-button {
+/****************/
+/** Bag Button **/
+/****************/
+.bag {
   bottom: 10%;
   position: fixed;
   right: 2%;
 }
 
 .bag-info {
+  @include radius(50%);
+
   background: $white;
   border: 2px solid $black;
-  border-radius: 50%;
   height: 80px;
   position: relative;
   width: 80px;
@@ -18,8 +22,9 @@
   }
 
   .nb-items {
+    @include radius(50%);
+
     background: $red;
-    border-radius: 50%;
     color: $white;
     display: inline-block;
     height: 25px;
