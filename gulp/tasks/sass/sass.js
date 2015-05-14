@@ -8,7 +8,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var config = require('./config').sass;
-var merge = require('merge-stream');
 
 gulp.task('sass:dev', function () {
   return gulp.src(config.mainSassFile)
@@ -17,10 +16,8 @@ gulp.task('sass:dev', function () {
 });
 
 gulp.task('sass:dist', function () {
-  var sass = gulp.src(config.mainSassFile).pipe($.sass());
-  var cssFramework = gulp.src(config.cssFramework);
-
-  return merge(cssFramework, sass)
+  return gulp.src(config.mainSassFile)
+    .pipe($.sass())
     .pipe($.concat('main.min.css'))
     .pipe($.minifyCss())
     .pipe(gulp.dest(config.dist.dest));
