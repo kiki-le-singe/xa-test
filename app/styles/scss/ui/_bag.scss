@@ -42,3 +42,36 @@
     position: absolute;
   }
 }
+
+/*****************/
+/** Bag Details **/
+/*****************/
+.bag-details {
+  h1, h5 {
+    color: $white;
+  }
+  h1 {
+    padding-left: 10px;
+    margin-bottom: 25px;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+  .infos {
+    background-color: $black;
+  }
+  .th {
+    border-width: 2px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .price {
+    font-size: 22px;
+    color: $blue;
+
+    i {
+      font-size: 28px;
+    }
+  }
+}
