@@ -13,7 +13,7 @@ function (Marionette, templates, BooksView) {
     regions: {
       books: '.books',
       bag: '.bag',
-      bagContent: '.bag-content'
+      bagDetails: '.bag-details'
     },
 
     onShow: function () {
