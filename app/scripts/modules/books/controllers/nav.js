@@ -1,7 +1,7 @@
 define([
   'marionette',
   '#books/models/booksCollection',
-  '#books/views/booksLayout'
+  '#books/views/layout'
 ],
 
 function (Marionette, BooksCollection, BooksLayoutView) {

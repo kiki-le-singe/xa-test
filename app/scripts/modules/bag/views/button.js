@@ -8,7 +8,7 @@ function (Marionette, templates, vent) {
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: templates['bag/bag'],
+    template: templates['bag/button'],
 
     ui: {
       bag: '.bag-info',

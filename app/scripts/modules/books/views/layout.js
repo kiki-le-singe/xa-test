@@ -2,15 +2,14 @@ define([
   'marionette',
   'templates',
   '#books/views/books',
-  '#bag/views/bag'
+  '#bag/views/layout'
 ],
 
-function (Marionette, templates, BooksView, BagView) {
+function (Marionette, templates, BooksView, BagLayoutView) {
   'use strict';
 
   return Marionette.LayoutView.extend({
-    template: templates['books/books-layout'],
-    className: 'books-container',
+    template: templates['books/layout'],
 
     regions: {
       books: '.books',
@@ -22,7 +21,7 @@ function (Marionette, templates, BooksView, BagView) {
         collection: this.collection
       }));
 
-      this.bag.show(new BagView());
+      this.bag.show(new BagLayoutView());
     }
   });
 });

@@ -1,8 +1,8 @@
 define([
   'marionette',
   'underscore',
-  'views/rootLayoutView',
-  'views/navItemView',
+  'views/rootLayout',
+  'views/navItem',
   'modules'
 ],
 
