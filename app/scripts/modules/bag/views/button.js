@@ -16,10 +16,6 @@ function (Marionette, templates, vent) {
       bagIcon: '.fi-shopping-bag'
     },
 
-    events: {
-      'click @ui.bag': 'showBag'
-    },
-
     initialize: function () {
       vent.on('bag:update', this.updateBag, this);
     },
@@ -49,10 +45,6 @@ function (Marionette, templates, vent) {
       else {
         this.ui.bagIcon.removeClass(activeClass);
       }
-    },
-
-    showBag: function () {
-      vent.trigger('bag:show');
     }
   });
 });

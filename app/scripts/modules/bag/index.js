@@ -1,9 +1,10 @@
 define([
   'marionette',
-  '#bag/controllers/nav'
+  '#bag/controllers/nav',
+  '#bag/routers/routers'
 ],
 
-function (Marionette, NavController) {
+function (Marionette, NavController, Routers) {
   'use strict';
 
   return Marionette.Object.extend({
@@ -11,7 +12,9 @@ function (Marionette, NavController) {
     initialize: function (options) {
       options = options || {};
 
-      this.controller = new NavController(options);
+      this.routers = new Routers({
+        controller: new NavController(options)
+      });
     }
   });
 });

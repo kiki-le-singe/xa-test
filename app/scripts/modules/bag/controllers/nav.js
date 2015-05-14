@@ -1,25 +1,25 @@
 define([
   'marionette',
   'vent',
-  '#books/models/booksCollection'
+  '#books/models/booksCollection',
+  '#bag/views/detailsComposite'
 ],
 
-function (Marionette, vent, BooksCollection) {
+function (Marionette, vent, BooksCollection, DetailsCompositeView) {
   'use strict';
 
   return Marionette.Controller.extend({
     initialize: function () {
+      this.contentRegion = this.getOption('contentRegion');
       this.collection = new BooksCollection();
 
       vent.on('cart:add', this.addBag, this);
       vent.on('cart:remove', this.removeBag, this);
-      vent.on('bag:show', this.showBag, this);
     },
 
     onDestroy: function () {
       vent.off('cart:add', this.addBag, this);
       vent.off('cart:remove', this.removeBag, this);
-      vent.off('bag:show', this.showBag, this);
     },
 
     addBag: function (model) {
