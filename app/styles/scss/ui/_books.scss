@@ -1,4 +1,8 @@
-.books {
+.books-container {
+  position: relative;
+}
+
+.books-list {
   margin: 0;
 }
 
@@ -54,6 +58,8 @@
     line-height: 1;
     position: absolute;
 
+    &:hover {
+      cursor: pointer;
     }
   }
 }
