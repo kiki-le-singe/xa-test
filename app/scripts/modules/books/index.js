@@ -1,11 +1,10 @@
 define([
   'marionette',
   '#books/controllers/nav',
-  '#books/routers/routers',
-  'vent'
+  '#books/routers/routers'
 ],
 
-function (Marionette, NavController, Routers, vent) {
+function (Marionette, NavController, Routers) {
   'use strict';
 
   return Marionette.Object.extend({
@@ -16,9 +15,6 @@ function (Marionette, NavController, Routers, vent) {
       this.routers = new Routers({
         controller: new NavController(options)
       });
-
-      console.log('initialize: booksIndexObject');
-      vent.trigger('module:books:bootstrapped');
     }
   });
 });
