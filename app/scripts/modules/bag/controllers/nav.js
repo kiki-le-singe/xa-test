@@ -1,15 +1,15 @@
 define([
   'marionette',
   'vent',
-  '#bag/models/items'
+  '#books/models/booksCollection'
 ],
 
-function (Marionette, vent, ItemsCollection) {
+function (Marionette, vent, BooksCollection) {
   'use strict';
 
   return Marionette.Controller.extend({
     initialize: function () {
-      this.collection = new ItemsCollection();
+      this.collection = new BooksCollection();
 
       vent.on('cart:add', this.addBag, this);
       vent.on('cart:remove', this.removeBag, this);
