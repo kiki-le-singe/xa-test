@@ -16,6 +16,7 @@ require.config({
 
   paths: {
     // modules
+    '#bag': 'modules/bag',
     '#book': 'modules/book',
     '#books': 'modules/books',
 

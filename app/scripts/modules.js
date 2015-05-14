@@ -1,14 +1,16 @@
 define([
+  '#bag/index',
   '#books/index'
 ],
 
-function (Books) {
+function (Bag, Books) {
   'use strict';
 
   return function (options) {
     options = options || {};
 
     var modules = [
+      new Bag(options),
       new Books(options)
     ];
 
