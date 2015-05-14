@@ -18,10 +18,6 @@ function (Marionette, behaviors, templates) {
       }
     },
 
-    initialize: function () {
-      console.log('initialize: bookView');
-    },
-
     onRender: function () {
       this.$el.fadeIn();
     }

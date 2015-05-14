@@ -14,10 +14,6 @@ function (Marionette, templates) {
       header: 'header',
       content: '.content',
       footer: 'footer'
-    },
-
-    initialize: function () {
-      console.log('initialize: rootLayoutView');
     }
   });
 });
