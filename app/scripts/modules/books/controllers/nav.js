@@ -24,7 +24,7 @@ function (Marionette, BooksCollection, BooksLayoutView) {
       var booksLayoutView = new BooksLayoutView({
         collection: this.collection
       });
-      this.contentRegion.show(booksLayoutView.render());
+      this.contentRegion.show(booksLayoutView);
     }
   });
 });
