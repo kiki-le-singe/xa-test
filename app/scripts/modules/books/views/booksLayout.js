@@ -14,8 +14,7 @@ function (Marionette, templates, BooksView, BagView) {
 
     regions: {
       books: '.books',
-      bag: '.bag',
-      bagDetails: '.bag-details'
+      bag: '.bag'
     },
 
     onShow: function () {
