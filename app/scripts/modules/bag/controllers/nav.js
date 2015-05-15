@@ -2,10 +2,12 @@ define([
   'marionette',
   'vent',
   '#books/models/booksCollection',
-  '#bag/views/detailsComposite'
+  '#bag/views/detailsComposite',
+  'helpers/book',
+  'helpers/offer'
 ],
 
-function (Marionette, vent, BooksCollection, DetailsCompositeView) {
+function (Marionette, vent, BooksCollection, DetailsCompositeView, bookHelper, offerHelper) {
   'use strict';
 
   return Marionette.Controller.extend({
@@ -37,10 +39,29 @@ function (Marionette, vent, BooksCollection, DetailsCompositeView) {
     },
 
     showBag: function () {
-      var detailsCompositeView = new DetailsCompositeView({
-        collection: this.collection
-      });
-      this.contentRegion.show(detailsCompositeView);
+      var self = this;
+      var detailsCompositeView = new DetailsCompositeView();
+
+      if (!self.collection.length) {
+        return self.contentRegion.show(detailsCompositeView);
+      }
+
+      // Get commercial offers
+      var promise = vent.request('books:get:commercialOffers', self.collection);
+      promise
+        .then(function (res) {
+          // debugger
+          var sumPrices = bookHelper.sumPrices(self.collection);
+          var bestOffer = offerHelper.getBestOffer(sumPrices, res.offers);
+
+          return {mickey: 'donald'};
+        })
+        .then(function (res) {
+          // debugger
+          detailsCompositeView.collection = self.collection;
+          detailsCompositeView.commercialOffers = res;
+          self.contentRegion.show(detailsCompositeView);
+        });
     }
   });
 });
