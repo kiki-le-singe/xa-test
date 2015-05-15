@@ -14,7 +14,7 @@ function (Marionette, BookItemView, templates) {
     className: 'bag-details row',
 
     onDestroy: function () {
-      if (this.collection.length) {
+      if (this.collection && this.collection.length) {
         this.collection.reset();
       }
     }
