@@ -28,6 +28,10 @@ require.config({
     'backbone.radio': '../bower_components/backbone.radio/build/backbone.radio',
     'backbone.babysitter': '../bower_components/backbone.babysitter/lib/backbone.babysitter',
     text: '../bower_components/requirejs-text/text',
+    helpers: 'helpers',
+    helpersHBS: 'helpers/handlebars',
+    superagent: '../bower_components/superagent/superagent',
+    bluebird: '../bower_components/bluebird/js/browser/bluebird',
     json: '../bower_components/requirejs-plugins/src/json',
     handlebars: '../bower_components/handlebars/handlebars.runtime'
   }
