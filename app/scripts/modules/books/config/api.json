@@ -1,3 +1,4 @@
 {
-  "books" : "http://henri-potier.xebia.fr/books"
+  "books" : "http://henri-potier.xebia.fr/books",
+  "commercialOffers" : "http://henri-potier.xebia.fr/books/:isbn/commercialOffers"
 }
