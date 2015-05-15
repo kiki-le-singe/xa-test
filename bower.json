@@ -22,7 +22,9 @@
     "requirejs-plugins": "~1.0.3",
     "handlebars": "~3.0.2",
     "foundation": "~5.5.2",
-    "foundation-icon-fonts": "*"
+    "foundation-icon-fonts": "*",
+    "superagent": "^0.21.0",
+    "bluebird": "~2.9.25"
   },
   "devDependencies": {
     "mocha": "~2.1.0",
