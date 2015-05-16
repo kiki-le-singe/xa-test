@@ -11,7 +11,7 @@ function (Marionette, BookItemView, templates) {
     template: templates['bag/details-composite'],
     childViewContainer: '.items',
     childView: BookItemView,
-    className: 'bag-details row',
+    className: 'bag-details',
 
     onDestroy: function () {
       if (this.collection && this.collection.length) {
