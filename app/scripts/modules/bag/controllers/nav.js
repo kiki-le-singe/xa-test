@@ -62,7 +62,7 @@ function (Marionette, vent, BooksCollection, DetailsCompositeView, bookHelper, o
         .then(function (res) {
           // Shows the details view
           detailsCompositeView.collection = self.collection;
-          detailsCompositeView.commercialOffers = res;
+          detailsCompositeView.commercialOffer = res;
           self.contentRegion.show(detailsCompositeView);
         });
     }

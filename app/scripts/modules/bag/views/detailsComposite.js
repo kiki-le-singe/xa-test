@@ -17,6 +17,15 @@ function (Marionette, BookItemView, templates) {
       if (this.collection && this.collection.length) {
         this.collection.reset();
       }
+    },
+
+    serializeData: function () {
+      var commercialOffer = this.getOption('commercialOffer');
+      if (commercialOffer) {
+        return {
+          commercialOffer: commercialOffer.bestOffer
+        };
+      }
     }
   });
 });

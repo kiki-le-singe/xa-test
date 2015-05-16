@@ -54,10 +54,13 @@
     padding-left: 10px;
     margin-bottom: 25px;
   }
+  h5 {
+    padding-top: 10px;
+  }
   .row {
     margin-bottom: 10px;
   }
-  .infos {
+  .infos, .commercial-offers {
     background-color: $black;
   }
   .th {
@@ -72,6 +75,14 @@
 
     i {
       font-size: 28px;
+    }
+  }
+  .commercial-offers {
+    color: $white;
+    padding: 10px;
+
+    p {
+      font-size: 22px;
     }
   }
 }
