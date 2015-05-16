@@ -58,7 +58,7 @@
     line-height: 1;
     position: absolute;
 
-    &:hover {
+    &:hover, &:active {
       color: $green;
       cursor: pointer;
     }
