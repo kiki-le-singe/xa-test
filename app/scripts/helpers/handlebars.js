@@ -1,18 +1,12 @@
 define([
-  'handlebars'
+  'handlebars',
+  'helpers/i18n'
 ],
 
-function (Handlebars) {
+function (Handlebars, i18n) {
   'use strict';
 
-  var bar = function (context, options) { // jshint unused:false
-    return context;
-  };
+  Handlebars.registerHelper('t', i18n.t);
 
-  var foo = function (context, options) { // jshint unused:false
-    return context;
-  };
-
-  Handlebars.registerHelper('bar', bar);
-  Handlebars.registerHelper('foo', foo);
+  // more handlebar helpers...
 });
