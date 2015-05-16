@@ -48,16 +48,19 @@ function (Marionette, vent, BooksCollection, DetailsCompositeView, bookHelper, o
 
       // Get commercial offers
       var promise = vent.request('books:get:commercialOffers', self.collection);
+
       promise
         .then(function (res) {
-          // debugger
+          // Get total price
           var sumPrices = bookHelper.sumPrices(self.collection);
-          var bestOffer = offerHelper.getBestOffer(sumPrices, res.offers);
 
-          return {mickey: 'donald'};
+          return {
+            sumPrices: sumPrices,
+            bestOffer: offerHelper.getBestOffer(sumPrices, res.offers) // Get the best offer
+          };
         })
         .then(function (res) {
-          // debugger
+          // Shows the details view
           detailsCompositeView.collection = self.collection;
           detailsCompositeView.commercialOffers = res;
           self.contentRegion.show(detailsCompositeView);
