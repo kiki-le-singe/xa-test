@@ -5,6 +5,7 @@ function () {
 
   var keys = {
     'shopping.bag': 'Shopping Bag',
+    'shopping.bag.empty': 'Your Shopping Bag is empty.',
     'commercial.offer': 'Commercial Offer',
     menu: 'menu',
     'main.item.1': 'Main Item 1',
