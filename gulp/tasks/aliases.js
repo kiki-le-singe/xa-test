@@ -24,6 +24,7 @@ gulp.task('lint', [
 gulp.task('dist', function (cb) {
   runSequence('clean:dist',
     ['sass:dist', 'handlebars', 'processhtml', 'imagemin'],
+    'fonts:dist',
     'requirejs',
     cb);
 });
