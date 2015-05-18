@@ -21,4 +21,7 @@ gulp.task('sass:dist', function () {
     .pipe($.concat('main.min.css'))
     .pipe($.minifyCss())
     .pipe(gulp.dest(config.dist.dest));
+gulp.task('fonts:dist', function () {
+  return gulp.src(fontsConfig.src)
+    .pipe(gulp.dest(fontsConfig.dist.dest));
 });

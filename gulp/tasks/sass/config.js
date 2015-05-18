@@ -10,5 +10,20 @@ module.exports = {
     dist: {
       dest: 'dist/styles/'
     }
+  },
+  fonts: {
+    src: [
+      foundationIconFontsDir + '*.eot',
+      foundationIconFontsDir + '*.svg',
+      foundationIconFontsDir + '*.ttf',
+      foundationIconFontsDir + '*.woff'
+    ],
+    dev: {
+      path: '../../bower_components/foundation-icon-fonts'
+    },
+    dist: {
+      path: 'fonts',
+      dest: 'dist/styles/fonts/'
+    }
   }
 };
