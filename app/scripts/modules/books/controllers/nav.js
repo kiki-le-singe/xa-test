@@ -1,30 +1,26 @@
 define([
   'marionette',
-  '#books/models/booksCollection',
+  '#books/resource/books',
   '#books/views/layout'
 ],
 
-function (Marionette, BooksCollection, BooksLayoutView) {
+function (Marionette, booksResource, BooksLayoutView) {
   'use strict';
 
   return Marionette.Controller.extend({
     initialize: function () {
       this.contentRegion = this.getOption('contentRegion');
-      this.collection = new BooksCollection();
     },
 
     books: function () {
-      var options = {
-        success: this.showBooksView.bind(this)
-      };
-      this.collection.fetch(options);
-    },
-
-    showBooksView: function () {
-      var booksLayoutView = new BooksLayoutView({
-        collection: this.collection
+      var self = this;
+      booksResource(null).then(function (collection) {
+        // shows the books layout view.
+        var booksLayoutView = new BooksLayoutView({
+          collection: collection
+        });
+        self.contentRegion.show(booksLayoutView);
       });
-      this.contentRegion.show(booksLayoutView);
     }
   });
 });
