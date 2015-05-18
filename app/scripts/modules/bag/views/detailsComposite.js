@@ -13,6 +13,16 @@ function (Marionette, BookItemView, templates) {
     childView: BookItemView,
     className: 'bag-details',
 
+    ui: {
+      commercialOffer: '.commercial-offers',
+      items: '.items'
+    },
+
+    onRender: function () {
+      this.ui.commercialOffer.addClass('bounceInUp');
+      this.ui.items.addClass('bounceInRight');
+    },
+
     onDestroy: function () {
       if (this.collection && this.collection.length) {
         this.collection.reset();

@@ -47,6 +47,8 @@
 /** Bag Details **/
 /*****************/
 .bag-details {
+  overflow: hidden;
+
   h1, h5 {
     color: $white;
   }

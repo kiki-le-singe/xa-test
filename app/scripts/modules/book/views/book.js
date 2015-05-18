@@ -19,7 +19,7 @@ function (Marionette, behaviors, templates) {
     },
 
     onRender: function () {
-      this.$el.fadeIn();
+      this.$el.addClass('fadeIn');
     }
   });
 });
