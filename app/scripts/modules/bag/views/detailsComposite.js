@@ -1,10 +1,11 @@
 define([
   'marionette',
   '#book/views/bookItem',
+  '#bag/views/noItemsView',
   'templates'
 ],
 
-function (Marionette, BookItemView, templates) {
+function (Marionette, BookItemView, NoItemsView, templates) {
   'use strict';
 
   return Marionette.CompositeView.extend({
@@ -12,6 +13,7 @@ function (Marionette, BookItemView, templates) {
     childViewContainer: '.items',
     childView: BookItemView,
     className: 'bag-details',
+    emptyView: NoItemsView,
 
     ui: {
       commercialOffer: '.commercial-offers',
