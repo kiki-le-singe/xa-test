@@ -11,7 +11,6 @@ function (BooksCollection, Promise) {
 
     return new Promise(function (resolve, reject) {
       var books = new BooksCollection(options);
-      debugger;
 
       books.fetch({
         success: function () {
